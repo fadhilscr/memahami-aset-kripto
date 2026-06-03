@@ -380,6 +380,66 @@ table.data .col-h { font-weight: 700; color: var(--ink-strong); }
 .widget .wsub { font-size: .82rem; color: var(--muted); }
 .widget .wdash { color: var(--faint); }
 
+/* ----------------------------- FLOATING CHAPTER NAV ---------------------- */
+#float-nav {
+  position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 90;
+  display: flex; align-items: center; gap: .5rem;
+  opacity: 0; transform: translateY(14px) scale(.97);
+  transition: opacity .3s ease, transform .3s ease;
+  pointer-events: none;
+}
+#float-nav.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+
+/* prev: small circle arrow only */
+.floatbtn-prev {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(14px) saturate(1.3);
+  color: var(--muted); display: grid; place-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .15s, color .15s, box-shadow .15s, transform .15s;
+  text-decoration: none; flex: none;
+}
+.floatbtn-prev:hover {
+  border-color: var(--accent); color: var(--accent);
+  box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none;
+}
+.floatbtn-prev svg { width: 16px; height: 16px; }
+
+/* next: pill with label */
+.floatbtn-next {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .62rem 1.15rem .62rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(14px) saturate(1.3);
+  color: var(--ink-strong); font-weight: 600; font-size: .88rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .15s, color .15s, box-shadow .15s, transform .15s, background .15s;
+  text-decoration: none; white-space: nowrap;
+}
+.floatbtn-next:hover {
+  border-color: var(--accent); color: var(--accent);
+  background: color-mix(in srgb, var(--accent-weak) 80%, transparent);
+  box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none;
+}
+.floatbtn-next__lbl {
+  max-width: 22ch; overflow: hidden; text-overflow: ellipsis;
+  font-size: .83rem; color: var(--muted); font-weight: 500;
+}
+.floatbtn-next__name {
+  font-weight: 700; color: inherit;
+}
+.floatbtn-next svg { width: 16px; height: 16px; flex: none; }
+
+@media (max-width: 560px) {
+  #float-nav { right: 1rem; bottom: 1rem; }
+  .floatbtn-next__lbl { display: none; }
+  .floatbtn-next { padding: .62rem .9rem; }
+}
+
 /* ----------------------------- TOOLS DIRECTORY --------------------------- */
 .filters { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: .9rem; align-items: center; }
 .filters__grp { display: flex; flex-wrap: wrap; gap: .45rem; align-items: center; }

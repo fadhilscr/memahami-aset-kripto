@@ -211,4 +211,52 @@
     var mins = Math.max(1, Math.round(words / 200));
     slot.textContent = "± " + mins + " menit baca";
   })();
+
+  // ---------- floating chapter nav ----------
+  (function () {
+    // Hanya pada halaman bab (bukan beranda)
+    if (path === "index.html") return;
+    var idx = PAGES.findIndex(function (p) { return p.href === path; });
+    if (idx < 0) return;
+
+    var prev = idx > 0 ? PAGES[idx - 1] : null;
+    var next = idx < PAGES.length - 1 ? PAGES[idx + 1] : null;
+    if (!next && !prev) return;
+
+    var chevLeft  = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>';
+    var chevRight = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+
+    var el = document.createElement("nav");
+    el.id = "float-nav";
+    el.setAttribute("aria-label", "Navigasi bab");
+
+    var html = "";
+    if (prev) {
+      html += '<a href="' + prev.href + '" class="floatbtn-prev" aria-label="Bab sebelumnya: ' + prev.short + '">' + chevLeft + "</a>";
+    }
+    if (next) {
+      // Short label: strip "Bab X — " prefix, keep rest
+      var nextName = next.short.replace(/^Bab \d+\s*[—–]\s*/, "").replace(/^Bab \d+\s*·\s*/, "");
+      html += '<a href="' + next.href + '" class="floatbtn-next">' +
+        '<span class="floatbtn-next__lbl">Selanjutnya</span>' +
+        '<span class="floatbtn-next__name">' + nextName + '</span>' +
+        chevRight +
+        "</a>";
+    }
+
+    el.innerHTML = html;
+    document.body.appendChild(el);
+
+    // Tampilkan setelah scroll 260px
+    var visible = false;
+    function check() {
+      var shouldShow = window.scrollY > 260;
+      if (shouldShow !== visible) {
+        visible = shouldShow;
+        el.classList.toggle("is-visible", visible);
+      }
+    }
+    window.addEventListener("scroll", check, { passive: true });
+    check(); // inisialisasi
+  })();
 })();
