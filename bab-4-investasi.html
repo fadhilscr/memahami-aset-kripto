@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bab 4 — Aset Kripto sebagai Instrumen Investasi</title>
 <meta name="description" content="Karakteristik kripto sebagai investasi, siklus pasar, Bitcoin halving, tiga pendekatan analisis (fundamental, teknikal, on-chain), sentimen pasar, dan strategi (DCA, HODL)." />
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Memahami Aset Kripto" />
+<meta property="og:title" content="Bab 4 — Aset Kripto sebagai Instrumen Investasi" />
+<meta property="og:description" content="Karakteristik kripto sebagai investasi, siklus pasar, Bitcoin halving, tiga pendekatan analisis (fundamental, teknikal, on-chain), sentimen pasar, dan strategi (DCA, HODL)." />
+<meta property="og:image" content="https://memahami-aset-kripto.vercel.app/assets/img/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bab 4 — Aset Kripto sebagai Instrumen Investasi" />
+<meta name="twitter:description" content="Karakteristik kripto sebagai investasi, siklus pasar, Bitcoin halving, tiga pendekatan analisis (fundamental, teknikal, on-chain), sentimen pasar, dan strategi (DCA, HODL)." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -136,13 +145,13 @@
           <p class="viz__note">Harga cenderung memantul di antara <strong style="color:#E6C667">support</strong> dan <strong style="color:#57E0E6">resistance</strong>. Ini alat probabilitas, bukan ramalan pasti — selalu sertai manajemen risiko.</p>
         </div>
 
-        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Layar trading bergaya cyberpunk: grafik candlestick kripto bercahaya neon hijau-merah dan biru di monitor gelap, refleksi, suasana ruang gelap navy dengan aksen emas. Sinematik, modern, tanpa teks terbaca." data-ai-file="assets/img/bab4-trading.webp">
-          <img alt="Layar trading kripto" data-src="assets/img/bab4-trading.webp" loading="lazy" />
+        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Layar trading bergaya cyberpunk: grafik candlestick kripto bercahaya neon hijau-merah dan biru di monitor gelap, refleksi, suasana ruang gelap navy dengan aksen emas. Sinematik, modern, tanpa teks terbaca." data-ai-file="assets/img/bab4-trading.png">
+          <img alt="Layar trading kripto" data-src="assets/img/bab4-trading.png" loading="lazy" />
           <figcaption class="ai-img__ph">
             <svg class="ai-img__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 4-5"/></svg>
             <span class="ai-img__tag">Slot gambar · auto-isi</span>
             <span class="ai-img__prompt">Layar trading candlestick — ilustrasi cyberpunk navy/neon.</span>
-            <span class="ai-img__meta">assets/img/bab4-trading.webp</span>
+            <span class="ai-img__meta">assets/img/bab4-trading.png</span>
           </figcaption>
         </figure>
 
@@ -192,6 +201,19 @@
           <div class="wlbl">Fear &amp; Greed Index</div>
           <div class="wval wdash">—</div>
           <div class="wsub">Slot data live — dapat diisi nanti via API saat di-deploy.</div>
+        </div>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:.75rem">
+          <div class="widget reveal" id="widget-btc" style="flex:1;min-width:200px">
+            <div class="wlbl">Bitcoin · BTC</div>
+            <div class="wval wdash">—</div>
+            <div class="wsub">memuat harga…</div>
+          </div>
+          <div class="widget reveal" id="widget-eth" style="flex:1;min-width:200px">
+            <div class="wlbl">Ethereum · ETH</div>
+            <div class="wval wdash">—</div>
+            <div class="wsub">memuat harga…</div>
+          </div>
         </div>
 
         <h3>Market Cap vs Fully Diluted Valuation (FDV)</h3>
@@ -264,5 +286,6 @@
 <div id="site-footer"></div>
 <script src="assets/js/site.js"></script>
 <script src="assets/js/viz.js"></script>
+<script src="assets/js/live-data.js"></script>
 </body>
 </html>
