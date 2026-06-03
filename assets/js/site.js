@@ -24,6 +24,8 @@
 
   var path = location.pathname.split("/").pop() || "index.html";
   if (path === "") path = "index.html";
+  // Vercel cleanUrls: URL tidak punya .html → tambahkan supaya cocok dengan PAGES
+  if (path && !path.includes(".")) path = path + ".html";
 
   var ACCENTS = [
     { id: "blue",   name: "Biru Samudra",  color: "#2563EB" },

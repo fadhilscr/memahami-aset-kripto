@@ -39,6 +39,37 @@
       });
   }
 
+  /* ---- Bitcoin Circulating Supply (CoinGecko) ---- */
+  var btcCircEl   = document.getElementById("btc-circ");
+  var btcMeterEl  = document.getElementById("btc-meter");
+  var btcChipPct  = document.getElementById("btc-chip-pct");
+  var btcChipRem  = document.getElementById("btc-chip-rem");
+
+  if (btcCircEl || btcMeterEl) {
+    fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        var b = data[0]; if (!b) return;
+        var circ = b.circulating_supply;
+        var maxS = b.max_supply || 21000000;
+        var pct  = (circ / maxS * 100);
+        var rem  = (maxS - circ) / 1e6;
+        var fmtN = function (n, dec) { return "≈ " + (n).toFixed(dec).replace(".", ",") + " juta"; };
+
+        if (btcCircEl)  btcCircEl.textContent = fmtN(circ / 1e6, 2);
+        if (btcMeterEl) {
+          var pctStr = pct.toFixed(1) + "%";
+          btcMeterEl.setAttribute("data-w", pctStr);
+          btcMeterEl.style.width = pctStr;
+        }
+        if (btcChipPct) btcChipPct.innerHTML =
+          '<span class="d d-gold"></span>' + pct.toFixed(1) + "% pasokan sudah beredar";
+        if (btcChipRem) btcChipRem.innerHTML =
+          '<span class="d d-cyan"></span>Sisa ' + fmtN(rem, 2) + " ditambang perlahan hingga ± 2140";
+      })
+      .catch(function () { /* silent — tetap tampil nilai statis */ });
+  }
+
   /* ---- Fear & Greed Index (alternative.me) ---- */
   var wFg = document.querySelector('[data-widget="fear-greed"]');
   if (!wFg) return;

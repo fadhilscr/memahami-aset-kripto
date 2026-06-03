@@ -181,16 +181,16 @@
         <div class="viz reveal">
           <p class="viz__cap">Kelangkaan terverifikasi: pasokan Bitcoin <span class="tag">data</span></p>
           <div class="meter">
-            <div class="meter__lbl"><span>Sudah ditambang</span><b>≈ 19,8 juta</b></div>
-            <div class="meter__track"><div class="meter__fill gold" data-w="94%"></div></div>
+            <div class="meter__lbl"><span>Sudah ditambang</span><b id="btc-circ">≈ 19,8 juta</b></div>
+            <div class="meter__track"><div class="meter__fill gold" data-w="94%" id="btc-meter"></div></div>
           </div>
           <div class="meter">
             <div class="meter__lbl"><span>Batas maksimal (hard cap)</span><b>21 juta · selamanya</b></div>
             <div class="meter__track"><div class="meter__fill" data-w="100%"></div></div>
           </div>
           <div class="viz-legend">
-            <span class="viz-chip"><span class="d d-gold"></span>≈ 94% pasokan sudah beredar</span>
-            <span class="viz-chip"><span class="d d-cyan"></span>Sisa ≈ 1,2 juta ditambang perlahan hingga ± 2140</span>
+            <span class="viz-chip" id="btc-chip-pct"><span class="d d-gold"></span>≈ 94% pasokan sudah beredar</span>
+            <span class="viz-chip" id="btc-chip-rem"><span class="d d-cyan"></span>Sisa ≈ 1,2 juta ditambang perlahan hingga ± 2140</span>
           </div>
           <p class="viz__note">Batas 21 juta keping ditetapkan dalam kode dan tak bisa diubah — inilah fondasi <strong style="color:#E6C667">kelangkaan</strong> yang dapat diverifikasi siapa pun.</p>
         </div>
@@ -234,5 +234,6 @@
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/site.js"></script>
 <script src="assets/js/viz.js"></script>
+<script src="assets/js/live-data.js"></script>
 </body>
 </html>
