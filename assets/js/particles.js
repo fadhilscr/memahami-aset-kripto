@@ -22,7 +22,7 @@
   var ctx = cvs.getContext("2d");
 
   /* ---- config ---- */
-  var MAX_D  = 155;   // max distance to draw connection line
+  var MAX_D  = 140;   // max distance to draw connection line
   var FPS    = 30;
   var INTV   = 1000 / FPS;
   var COLORS = ["#2563EB","#2563EB","#2563EB","#57E0E6","#57E0E6","#C9A227"];
@@ -56,13 +56,13 @@
   function mkPt() {
     return {
       x: rng(0,W), y: rng(0,H),
-      vx: rng(-0.3,0.3), vy: rng(-0.3,0.3),
-      r:  rng(1,2.2),
+      vx: rng(-0.2,0.2), vy: rng(-0.2,0.2),   // slower = less dizzy
+      r:  rng(0.8,1.8),                          // slightly smaller
       col: COLORS[0|(Math.random()*COLORS.length)],
-      alpha: rng(0.45,0.85)
+      alpha: rng(0.16,0.40)                       // much lower opacity
     };
   }
-  function count(){ return W < 768 ? 32 : 70; }
+  function count(){ return W < 768 ? 18 : 40; }  // fewer particles
 
   function resize() {
     W = cvs.width  = window.innerWidth;
@@ -108,7 +108,7 @@
         dx=p1.x-p2.x; dy=p1.y-p2.y;
         d=Math.sqrt(dx*dx+dy*dy);
         if (d<MAX_D) {
-          la = (1 - d/MAX_D) * 0.22;
+          la = (1 - d/MAX_D) * 0.09;  // lines much more subtle
           rgb = toRgb(p1.col);
           ctx.strokeStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+la+")";
           ctx.beginPath(); ctx.moveTo(p1.x,p1.y); ctx.lineTo(p2.x,p2.y); ctx.stroke();
@@ -125,13 +125,13 @@
       if(p.y<-12)p.y=H+12; if(p.y>H+12)p.y=-12;
 
       rgb = toRgb(p.col);
-      // soft outer glow
-      ctx.globalAlpha = p.alpha * 0.22;
+      // soft outer glow (very subtle)
+      ctx.globalAlpha = p.alpha * 0.10;
       ctx.fillStyle = p.col;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*3.8,0,6.2832); ctx.fill();
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*2.6,0,6.2832); ctx.fill();
       // mid glow
-      ctx.globalAlpha = p.alpha * 0.55;
-      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*1.8,0,6.2832); ctx.fill();
+      ctx.globalAlpha = p.alpha * 0.30;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r*1.4,0,6.2832); ctx.fill();
       // core
       ctx.globalAlpha = p.alpha;
       ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.2832); ctx.fill();

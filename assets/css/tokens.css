@@ -20,16 +20,16 @@
   --accent-weak: #dce6fb;
 
   /* Surfaces & text (LIGHT) */
-  --bg: #F6F8FB;
-  --bg-tint: #eef2f8;
+  --bg: #F4F7FB;
+  --bg-tint: #E8EEF7;
   --surface: #FFFFFF;
-  --surface-2: #F1F4F9;
+  --surface-2: #EDF1F8;
   --ink: #15233D;
   --ink-strong: #0f1c33;
-  --muted: #54657F;
-  --faint: #8493a8;
-  --border: #E3E8F0;
-  --border-strong: #cdd6e3;
+  --muted: #445870;       /* was #54657F — darker for better readability */
+  --faint: #5e6e84;       /* was #8493a8 — passes WCAG AA on light bg */
+  --border: #C8D4E4;      /* was #E3E8F0 — clearly visible card borders */
+  --border-strong: #ADBDD3; /* was #cdd6e3 — visible dividers */
 
   /* Semantic callouts (LIGHT) */
   --note-bg: oklch(0.974 0.035 92);
@@ -76,9 +76,9 @@
 
 /* ---- Dark theme ---- */
 :root[data-theme="dark"] {
-  --navy: #0E1A30;
-  --navy-700: #16243f;
-  --navy-900: #08111f;
+  --navy: #162840;        /* was #0E1A30 — more visible over dark canvas */
+  --navy-700: #1e3454;    /* was #16243f */
+  --navy-900: #0a1020;    /* was #08111f */
   --gold: #E0C25C;
   --gold-ink: #E0C25C;
 
@@ -86,16 +86,16 @@
   --accent-strong: #8db1ff;
   --accent-weak: #1c2c4e;
 
-  --bg: #0A1120;
-  --bg-tint: #0e1726;
-  --surface: #111c30;
-  --surface-2: #16233b;
+  --bg: #080d1a;          /* darker, closer to canvas top color */
+  --bg-tint: #0f1d36;     /* was #0e1726 — subtle section separation */
+  --surface: #14213d;     /* was #111c30 — clearly distinct over canvas */
+  --surface-2: #1b2d4a;   /* was #16233b — visible hierarchy */
   --ink: #E8EEF8;
   --ink-strong: #f4f7fc;
-  --muted: #9DACC6;
-  --faint: #6c7c98;
-  --border: #243352;
-  --border-strong: #324468;
+  --muted: #a8bbd4;       /* was #9DACC6 — slightly brighter */
+  --faint: #7a8ea8;       /* was #6c7c98 — better contrast on dark surface */
+  --border: #2c4168;      /* was #243352 — clearly visible borders */
+  --border-strong: #3d5880; /* was #324468 — definite card outlines */
 
   --note-bg: oklch(0.30 0.05 90);
   --note-bd: oklch(0.45 0.07 90);
