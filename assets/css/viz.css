@@ -223,3 +223,133 @@
 .icon-tile .ic { width: 30px; height: 30px; color: var(--v-cyan); margin-bottom: .55rem; filter: drop-shadow(0 0 5px rgba(87,224,230,.4)); }
 .icon-tile h5 { font-family: var(--font-sans); font-size: .92rem; color: var(--v-ink); margin: 0 0 .25rem; }
 .icon-tile p { font-size: .8rem; color: var(--v-mut); margin: 0; line-height: 1.45; }
+
+/* =========================================================================
+   LIGHT MODE OVERRIDES — viz & diagram panels
+   Panel tetap bertema biru tapi dengan latar terang agar terbaca di siang hari
+   ========================================================================= */
+:root:not([data-theme="dark"]) .viz,
+:root:not([data-theme="dark"]) .diagram {
+  --v-bg1: #edf2fc;
+  --v-bg2: #f5f8fe;
+  --v-line: #2563EB;
+  --v-cyan: #0d7a79;
+  --v-gold: #8a6912;
+  --v-ink: #15233D;
+  --v-mut: #445870;
+  --v-grid: rgba(37,99,235,.07);
+  --v-border: #bccde3;
+  box-shadow: inset 0 0 60px rgba(37,99,235,.04), 0 6px 24px -10px rgba(15,28,51,.14);
+}
+/* corner tick in light mode */
+:root:not([data-theme="dark"]) .viz::after,
+:root:not([data-theme="dark"]) .diagram::after {
+  border-color: var(--v-cyan);
+  opacity: .45;
+}
+
+/* netviz SVG nodes — light fills */
+:root:not([data-theme="dark"]) .netviz circle.node { fill: #dbe9fa; stroke: #2563EB; }
+:root:not([data-theme="dark"]) .netviz circle.hub  { fill: #fef5dc; stroke: #8a6912; stroke-width: 2.5; }
+:root:not([data-theme="dark"]) .netviz line        { stroke: #2563EB; opacity: .45; }
+:root:not([data-theme="dark"]) .netviz line.gold   { stroke: #8a6912; opacity: .8; }
+
+/* segmented toggle */
+:root:not([data-theme="dark"]) .viz-seg {
+  background: rgba(255,255,255,.7);
+  border-color: var(--v-border);
+}
+:root:not([data-theme="dark"]) .viz-seg button     { color: #445870; }
+:root:not([data-theme="dark"]) .viz-seg button:hover { color: #15233D; }
+:root:not([data-theme="dark"]) .viz-seg button.is-on {
+  color: #fff;
+  background: linear-gradient(180deg, #0d7a79, #0a6262);
+  box-shadow: 0 0 16px -4px rgba(13,122,121,.5);
+}
+
+/* flow steps & compare columns */
+:root:not([data-theme="dark"]) .flow__step,
+:root:not([data-theme="dark"]) .vcol {
+  background: rgba(255,255,255,.7);
+  border-color: var(--v-border);
+}
+:root:not([data-theme="dark"]) .flow__step:hover {
+  border-color: var(--v-cyan);
+  box-shadow: 0 0 18px -6px rgba(13,122,121,.35);
+}
+:root:not([data-theme="dark"]) .vcol--a { box-shadow: inset 3px 0 0 var(--v-line); }
+:root:not([data-theme="dark"]) .vcol--b { box-shadow: inset 3px 0 0 var(--v-gold); }
+:root:not([data-theme="dark"]) .vcol h5 .dotc { box-shadow: none; }
+:root:not([data-theme="dark"]) .vcol--b h5 .dotc { box-shadow: none; }
+
+/* meter track */
+:root:not([data-theme="dark"]) .meter__track {
+  background: rgba(200,218,240,.5);
+  border-color: var(--v-border);
+}
+
+/* tooltip */
+:root:not([data-theme="dark"]) .viz-tip {
+  background: #f0f5fe;
+  border-color: var(--v-line);
+  color: #15233D;
+  box-shadow: 0 8px 24px -8px rgba(15,28,51,.18);
+}
+:root:not([data-theme="dark"]) .viz-tip strong { color: var(--v-line); }
+
+/* viz chip */
+:root:not([data-theme="dark"]) .viz-chip {
+  background: rgba(255,255,255,.75);
+  border-color: var(--v-border);
+}
+
+/* icon tiles */
+:root:not([data-theme="dark"]) .icon-tile {
+  background: rgba(255,255,255,.75);
+  border-color: var(--v-border);
+}
+:root:not([data-theme="dark"]) .icon-tile:hover {
+  border-color: var(--v-cyan);
+  box-shadow: 0 0 18px -6px rgba(13,122,121,.3);
+}
+:root:not([data-theme="dark"]) .icon-tile .ic {
+  filter: drop-shadow(0 0 4px rgba(13,122,121,.35));
+}
+
+/* diagram inner components */
+:root:not([data-theme="dark"]) .diagram .blockrow .blk {
+  background: rgba(255,255,255,.75);
+  border-color: var(--v-line);
+  box-shadow: 0 0 12px -5px rgba(37,99,235,.2);
+}
+:root:not([data-theme="dark"]) .diagram .blockrow .blk .bn { color: var(--v-line); }
+:root:not([data-theme="dark"]) .diagram .blockrow .blk .bh { color: var(--v-mut); }
+:root:not([data-theme="dark"]) .diagram .blockrow .blk .bx { color: var(--v-ink); }
+:root:not([data-theme="dark"]) .diagram .stack .l1 {
+  background: rgba(213,229,250,.55);
+  color: var(--v-ink);
+  box-shadow: inset 3px 0 0 var(--v-cyan);
+}
+:root:not([data-theme="dark"]) .diagram .stack .l2 {
+  background: rgba(37,99,235,.08);
+  border-color: var(--v-line);
+}
+:root:not([data-theme="dark"]) .diagram .stack .l2 .lt { color: var(--v-line); }
+:root:not([data-theme="dark"]) .diagram .stack .l2 .ls { color: var(--v-ink); }
+:root:not([data-theme="dark"]) .diagram .stack .between { color: var(--v-mut); }
+:root:not([data-theme="dark"]) .diagram .timeline .dot {
+  background: #edf2fc;
+  border-color: var(--v-line);
+  box-shadow: 0 0 0 4px #edf2fc, 0 0 8px -2px var(--v-line);
+}
+:root:not([data-theme="dark"]) .diagram .timeline li.gold .dot {
+  border-color: var(--v-gold);
+  box-shadow: 0 0 0 4px #edf2fc, 0 0 8px -2px var(--v-gold);
+}
+:root:not([data-theme="dark"]) .diagram .halving__step {
+  background: rgba(255,255,255,.75);
+  border-color: var(--v-border);
+}
+:root:not([data-theme="dark"]) .diagram .halving__step .yr    { color: var(--v-line); }
+:root:not([data-theme="dark"]) .diagram .halving__step .reward { color: var(--v-ink); }
+:root:not([data-theme="dark"]) .diagram .halving__step .reward small { color: var(--v-mut); }
