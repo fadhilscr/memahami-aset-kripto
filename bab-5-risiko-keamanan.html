@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="blue">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bab 5 — Risiko dan Keamanan</title>
+<meta name="description" content="Empat kategori risiko utama, self-custody & perlindungan seed phrase, jenis-jenis penipuan (scam), daftar tanda bahaya, dan risiko smart contract." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/viz.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="main">
+  <header class="chap-hero">
+    <div class="chap-hero__inner">
+      <p class="kicker">Bab 5 · Risiko &amp; Keamanan</p>
+      <h1>Risiko dan Keamanan</h1>
+      <p>Bab ini mungkin yang terpenting. Di dunia kripto, di mana transaksi bersifat permanen dan tidak ada “layanan pelanggan” yang bisa membatalkan kesalahan, pengetahuan tentang risiko dan keamanan bukan pelengkap — melainkan syarat bertahan.</p>
+    </div>
+  </header>
+
+  <div class="chap-layout">
+    <article class="prose">
+      <section id="kategori">
+        <p class="lead">Banyak kerugian di dunia ini bukan disebabkan oleh harga yang turun, melainkan oleh kelalaian keamanan dan penipuan.</p>
+        <h2><span class="nmark">5.1</span> Empat Kategori Risiko Utama</h2>
+        <div class="grid grid-2">
+          <div class="card reveal"><h4>Volatilitas</h4><p>Harga bisa naik atau turun sangat tajam dalam waktu singkat. Siapkan mental dan jangan berinvestasi melebihi kemampuan menanggung kerugian.</p></div>
+          <div class="card reveal"><h4>Keamanan (Security)</h4><p>Risiko kehilangan akses karena lupa atau bocornya kunci dompet. Sekali kunci hilang, aset bisa lenyap selamanya — tidak ada fitur “lupa password”.</p></div>
+          <div class="card reveal"><h4>Regulasi</h4><p>Perubahan kebijakan pemerintah di negara-negara besar dapat mengguncang harga pasar secara signifikan dan tiba-tiba.</p></div>
+          <div class="card reveal"><h4>Penipuan (Scam)</h4><p>Ekosistem ini penuh modus penipuan yang terus berkembang. Inilah ancaman yang <strong>paling bisa dicegah dengan pengetahuan</strong>.</p></div>
+        </div>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Empat kategori risiko — sekilas <span class="tag">ikon</span></p>
+          <div class="icon-tiles" style="margin:0">
+            <div class="icon-tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-9"/><path d="M21 7v5M21 7h-5"/></svg><h5>Volatilitas</h5><p>Harga bisa berayun tajam dalam waktu singkat.</p></div>
+            <div class="icon-tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><h5>Keamanan</h5><p>Kunci hilang = aset lenyap, tanpa pemulihan.</p></div>
+            <div class="icon-tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg><h5>Regulasi</h5><p>Perubahan kebijakan bisa mengguncang pasar.</p></div>
+            <div class="icon-tile"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><h5>Penipuan</h5><p>Paling bisa dicegah — dengan pengetahuan.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="self-custody">
+        <h2><span class="nmark">5.2</span> Keamanan &amp; Self-Custody Lebih Dalam</h2>
+        <p>Mengelola keamanan aset sendiri (<em>self-custody</em>) memberi kendali penuh, tetapi memindahkan seluruh tanggung jawab ke pundak Anda.</p>
+
+        <h3>Lindungi Seed Phrase di Atas Segalanya</h3>
+        <div class="viz reveal">
+          <p class="viz__cap">Seed phrase: lakukan vs jangan <span class="tag">aturan</span></p>
+          <div class="vcompare">
+            <div class="vcol vcol--b">
+              <h5><span class="dotc"></span>✓ Lakukan</h5>
+              <ul>
+                <li>Tulis fisik di kertas / pelat logam</li>
+                <li>Simpan offline di tempat aman &amp; rahasia</li>
+                <li>Uji proses restore saat dana masih kecil</li>
+              </ul>
+            </div>
+            <div class="vcol vcol--a" style="box-shadow:inset 3px 0 0 #ff7a8a">
+              <h5><span class="dotc" style="background:#ff7a8a;box-shadow:0 0 8px #ff7a8a"></span>✕ Jangan</h5>
+              <ul style="--m:#ff7a8a">
+                <li>Foto / screenshot / catatan digital</li>
+                <li>Simpan di email, cloud, atau chat</li>
+                <li>Bagikan ke siapa pun — tak ada layanan resmi yang minta</li>
+              </ul>
+            </div>
+          </div>
+          <p class="viz__note">Tidak ada tombol “lupa password” di kripto. Seed phrase adalah cadangan induk — bocor berarti aset bisa lenyap selamanya.</p>
+        </div>
+        <div class="callout callout--risk">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <div class="callout__body">
+            <strong class="callout__t">Aturan mutlak seed phrase</strong>
+            <p><strong>Tulis secara fisik</strong> (kertas atau pelat logam), simpan offline di tempat aman. Jangan menyimpannya sebagai foto, catatan digital, email, atau cloud.</p>
+            <p><strong>Jangan pernah membagikannya</strong> kepada siapa pun — tidak ada layanan resmi yang akan meminta seed phrase Anda. Permintaan semacam itu pasti penipuan.</p>
+            <p><strong>Uji proses pemulihan</strong> (restore) saat dana masih kecil, agar Anda yakin cadangan berfungsi sebelum menyimpan dana besar.</p>
+          </div>
+        </div>
+
+        <h3>Aktifkan 2FA yang Kuat</h3>
+        <p>Untuk akun di bursa, aktifkan autentikasi dua faktor (2FA) <strong>berbasis aplikasi</strong> seperti Google Authenticator, bukan SMS. SMS OTP rentan terhadap serangan pembajakan nomor (<em>SIM swapping</em>).</p>
+
+        <h3>Waspada Phishing &amp; Tautan Palsu</h3>
+        <p>Phishing adalah upaya menipu Anda agar memasukkan kunci atau kredensial di situs/aplikasi palsu yang menyerupai aslinya. Perlindungan: selalu periksa alamat situs dengan teliti (waspadai <em>typosquatting</em> — alamat yang sengaja dibuat mirip dengan satu huruf berbeda), jangan klik tautan dari sumber tak dikenal, dan akses platform melalui <strong>bookmark yang Anda simpan sendiri</strong>.</p>
+
+        <h3>Praktik Lanjutan</h3>
+        <div class="grid grid-3">
+          <div class="tile reveal"><h4>Hardware Wallet</h4><p>Cold wallet untuk menyimpan aset jangka panjang secara offline.</p></div>
+          <div class="tile reveal"><h4>Burner Wallet</h4><p>Dompet terpisah berisi dana kecil khusus untuk berinteraksi dengan aplikasi baru yang belum Anda percayai penuh.</p></div>
+          <div class="tile reveal"><h4>Multisig</h4><p>Dompet yang membutuhkan beberapa kunci untuk menyetujui satu transaksi — lapisan keamanan untuk dana besar.</p></div>
+        </div>
+      </section>
+
+      <section id="scam">
+        <h2><span class="nmark">5.3</span> Mengenali Jenis-Jenis Penipuan (Scam)</h2>
+        <p>Mengenali pola penipuan adalah pertahanan terbaik. Berikut modus yang paling umum:</p>
+        <div class="viz reveal">
+          <p class="viz__cap">Modus penipuan yang paling umum <span class="tag">ikon</span></p>
+          <div class="icon-tiles" style="margin:0">
+            <div class="icon-tile" data-tip="Rug Pull|Pengembang kabur membawa dana investor setelah likuiditas terkumpul."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-2 13H5L3 7z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg><h5>Rug Pull</h5><p>Tim kabur membawa dana.</p></div>
+            <div class="icon-tile" data-tip="Phishing|Situs/email/pesan palsu yang menyamar untuk mencuri kunci atau kredensial."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a5 5 0 0 1-10 0c0-4 5-9 5-9s5 5 5 9z"/><path d="M2 12h7M2 8h5M2 16h5"/></svg><h5>Phishing</h5><p>Situs/pesan palsu pencuri kunci.</p></div>
+            <div class="icon-tile" data-tip="Ponzi|Membayar investor lama dari setoran investor baru — runtuh saat setoran berhenti."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"/><path d="M12 9v4M12 16h.01"/></svg><h5>Ponzi</h5><p>Bayar lama dari setoran baru.</p></div>
+            <div class="icon-tile" data-tip="Pump &amp; Dump|Harga digoreng naik lewat hype, lalu dijual besar-besaran oleh pelakunya."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l5-6 4 3 5-8"/><path d="M17 5h4v4"/><path d="M3 20h18"/></svg><h5>Pump &amp; Dump</h5><p>Hype lalu jual massal.</p></div>
+            <div class="icon-tile" data-tip="Fake Airdrop|Iming-iming token gratis yang mengarahkan Anda menandatangani transaksi berbahaya."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M8 11l4 4 4-4"/><path d="M5 19h14"/></svg><h5>Fake Airdrop</h5><p>“Token gratis” penjebak.</p></div>
+            <div class="icon-tile" data-tip="Honeypot|Token bisa dibeli tapi tak bisa dijual — dijebak dalam kode kontraknya."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 4H6L5 8z"/><path d="M6 12l1.5 8h9L18 12"/><path d="M9 5h6"/></svg><h5>Honeypot</h5><p>Bisa beli, tak bisa jual.</p></div>
+            <div class="icon-tile" data-tip="Impersonation|Menyamar sebagai tokoh/admin/layanan resmi, sering lewat giveaway palsu."><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/><path d="M17 3l1.5 1.5L17 6"/></svg><h5>Impersonation</h5><p>Menyamar tokoh/admin resmi.</p></div>
+          </div>
+          <p class="viz__note">Arahkan kursor / ketuk tiap ikon untuk cara kerjanya. Tabel di bawah merangkum hal yang sama secara lengkap.</p>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="data">
+            <thead><tr><th>Jenis Scam</th><th>Cara Kerjanya</th></tr></thead>
+            <tbody>
+              <tr><td class="col-h">Rug Pull</td><td>Pengembang proyek tiba-tiba menghilang membawa dana investor setelah mengumpulkan likuiditas atau menjual besar-besaran.</td></tr>
+              <tr><td class="col-h">Phishing</td><td>Situs, email, atau pesan palsu yang menyamar untuk mencuri kunci atau kredensial Anda.</td></tr>
+              <tr><td class="col-h">Ponzi Scheme</td><td>Skema yang membayar investor lama dari setoran investor baru, bukan dari keuntungan nyata — runtuh saat setoran baru berhenti.</td></tr>
+              <tr><td class="col-h">Pump and Dump</td><td>Harga sebuah aset “digoreng” naik lewat hype terkoordinasi, lalu dijual besar-besaran oleh pelakunya saat banyak orang masuk.</td></tr>
+              <tr><td class="col-h">Fake Airdrop</td><td>Iming-iming token gratis yang mengarahkan Anda menghubungkan dompet ke situs jahat atau menandatangani transaksi berbahaya.</td></tr>
+              <tr><td class="col-h">Honeypot</td><td>Token yang bisa dibeli tetapi tidak bisa dijual karena dijebak dalam kode smart contract-nya.</td></tr>
+              <tr><td class="col-h">Impersonation</td><td>Penipu menyamar sebagai tokoh terkenal, admin, atau layanan resmi (sering lewat giveaway palsu) untuk memancing transfer.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="red-flags">
+        <h2><span class="nmark">5.4</span> Membedakan Proyek Legit dan Scam: Tanda Bahaya</h2>
+        <p>Sebelum menaruh dana pada proyek apa pun, periksa tanda-tanda bahaya (<em>red flags</em>) berikut. Semakin banyak yang terpenuhi, semakin tinggi risikonya:</p>
+        <div class="callout callout--risk">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V4a1 1 0 0 1 1-1h12l-3 5 3 5H5"/></svg></span>
+          <div class="callout__body">
+            <ul style="margin:0;padding-left:1.1em">
+              <li>Menjanjikan imbal hasil <strong>pasti, tetap, dan besar tanpa risiko</strong> — penanda penipuan paling klasik (langgar prinsip “Logis”).</li>
+              <li>Tim pengembang anonim atau identitasnya tidak bisa diverifikasi.</li>
+              <li>Smart contract belum diaudit oleh pihak independen tepercaya.</li>
+              <li>Likuiditas tidak dikunci (memungkinkan rug pull).</li>
+              <li>Tekanan “beli sekarang sebelum terlambat” dan taktik FOMO yang agresif.</li>
+              <li>Whitepaper yang kabur, menjiplak, atau tanpa substansi teknis nyata.</li>
+              <li>Distribusi token yang sangat timpang (sebagian besar dipegang segelintir pihak).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="smart-contract">
+        <h2><span class="nmark">5.5</span> Risiko Smart Contract &amp; Risiko Sistemik</h2>
+        <p>Selain penipuan yang disengaja, ada pula risiko teknis. Smart contract adalah program, dan program bisa memiliki celah (<em>bug</em>) yang dieksploitasi peretas — sepanjang sejarah DeFi, eksploitasi semacam ini telah menyebabkan kerugian besar, terutama pada protokol baru yang belum teruji dan pada <strong>bridge antar-jaringan</strong>. Mengutamakan protokol yang sudah mapan, teraudit, dan teruji waktu adalah langkah kehati-hatian penting.</p>
+        <p>Risiko lain yang perlu disadari: risiko regulasi dan pajak (<a href="bab-6-regulasi.html">Bab 6</a>) serta risiko likuiditas pada aset-aset kecil yang sulit dijual saat pasar sepi.</p>
+
+        <div class="callout callout--tip">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"/></svg></span>
+          <div class="callout__body">
+            <strong class="callout__t">Kesimpulan Bab Keamanan — Tiga Pilar</strong>
+            <p><strong>(1) Gunakan uang dingin</strong> — hanya dana yang Anda relakan hilang. <strong>(2) Diversifikasi</strong> — jangan menaruh semua telur dalam satu keranjang; sebar antaraset kripto dan non-kripto. <strong>(3) Amankan akun dan kunci</strong> — aktifkan 2FA aplikasi, lindungi seed phrase, dan pertimbangkan cold wallet untuk dana besar.</p>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <aside class="toc" aria-label="Daftar isi halaman">
+      <p class="toc__title">Di halaman ini</p>
+      <ul>
+        <li><a href="#kategori">5.1 Empat kategori risiko</a></li>
+        <li><a href="#self-custody">5.2 Self-custody</a></li>
+        <li><a href="#scam">5.3 Jenis penipuan</a></li>
+        <li><a href="#red-flags">5.4 Tanda bahaya</a></li>
+        <li><a href="#smart-contract">5.5 Risiko smart contract</a></li>
+      </ul>
+      <p class="toc__read" data-readtime></p>
+    </aside>
+  </div>
+
+  <nav class="pager" id="site-pager" aria-label="Navigasi bab"></nav>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/viz.js"></script>
+</body>
+</html>

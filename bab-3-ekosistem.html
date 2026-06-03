@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="blue">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bab 3 — Ekosistem Aset Kripto</title>
+<meta name="description" content="Koin vs token, empat jenis aset penting, DeFi, staking & yield, stablecoin, NFT, tokenomics, gas fees, jenis token, Web3, DAO, bridge, dan oracle." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/viz.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="main">
+  <header class="chap-hero">
+    <div class="chap-hero__inner">
+      <p class="kicker">Bab 3 · Ekosistem</p>
+      <h1>Ekosistem Aset Kripto</h1>
+      <p>Dunia kripto jauh lebih luas daripada sekadar Bitcoin. Di atas fondasi blockchain tumbuh ribuan jenis aset dengan tujuan berbeda, serta seluruh sistem keuangan dan aplikasi yang berjalan tanpa perantara. Bab ini memetakan ekosistem tersebut.</p>
+    </div>
+  </header>
+
+  <div class="chap-layout">
+    <article class="prose">
+      <!-- 3.1 -->
+      <section id="koin-token">
+        <h2><span class="nmark">3.1</span> Koin vs Token</h2>
+        <p class="lead">Perbedaannya terletak pada satu hal: apakah aset itu memiliki blockchain sendiri, atau “menumpang” di blockchain milik orang lain.</p>
+        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Ilustrasi ekosistem kripto yang luas bergaya cyberpunk: konstelasi token, koin, ikon DeFi dan NFT yang saling terhubung oleh garis neon biru di atas latar navy gelap berkabut, aksen emas. Sinematik, modern, tanpa teks." data-ai-file="assets/img/bab3-ekosistem.webp">
+          <img alt="Ilustrasi ekosistem kripto" data-src="assets/img/bab3-ekosistem.webp" loading="lazy" />
+          <figcaption class="ai-img__ph">
+            <svg class="ai-img__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg>
+            <span class="ai-img__tag">Slot gambar · auto-isi</span>
+            <span class="ai-img__prompt">Lanskap ekosistem kripto — ilustrasi cyberpunk navy/neon.</span>
+            <span class="ai-img__meta">assets/img/bab3-ekosistem.webp</span>
+          </figcaption>
+        </figure>
+        <div class="table-wrap reveal">
+          <table class="data">
+            <thead><tr><th></th><th>Koin (Coin)</th><th>Token</th></tr></thead>
+            <tbody>
+              <tr><td class="col-h">Definisi</td><td>Aset asli dari sebuah blockchain (Layer 1)</td><td>Aset yang dibuat di atas blockchain milik jaringan lain</td></tr>
+              <tr><td class="col-h">Blockchain</td><td>Punya jaringan sendiri</td><td>Menumpang jaringan lain (mis. Ethereum)</td></tr>
+              <tr><td class="col-h">Fungsi umum</td><td>Membayar biaya jaringan, mengamankan jaringan</td><td>Mewakili utilitas, hak suara, atau aset tertentu</td></tr>
+              <tr><td class="col-h">Contoh</td><td class="mono">BTC, ETH, SOL</td><td>Token di atas Ethereum, dll.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Koin punya rumah sendiri, token menumpang <span class="tag">skema</span></p>
+          <div class="vcompare">
+            <div class="vcol vcol--a">
+              <h5><span class="dotc"></span>Koin — blockchain sendiri</h5>
+              <svg viewBox="0 0 260 110" role="img" aria-label="Koin berjalan di blockchain miliknya sendiri.">
+                <rect x="10" y="66" width="240" height="34" rx="8" fill="#0b1424" stroke="#6C9CFF"/><text x="130" y="88" text-anchor="middle" font-size="11" fill="#8ea4ca">Blockchain Layer 1</text>
+                <circle cx="130" cy="34" r="22" fill="#1c2c4e" stroke="#E6C667" stroke-width="2" class="glow-gold"/><text x="130" y="40" text-anchor="middle" font-size="15" fill="#E6C667">₿</text>
+              </svg>
+              <p style="font-size:.84rem;color:#8ea4ca;margin:.4rem 0 0">Aset asli yang mengamankan &amp; membayar biaya jaringannya sendiri. Mis. BTC, ETH, SOL.</p>
+            </div>
+            <div class="vcol vcol--b">
+              <h5><span class="dotc"></span>Token — menumpang jaringan lain</h5>
+              <svg viewBox="0 0 260 110" role="img" aria-label="Beberapa token berjalan di atas satu blockchain milik jaringan lain.">
+                <rect x="10" y="66" width="240" height="34" rx="8" fill="#0b1424" stroke="#6C9CFF"/><text x="130" y="88" text-anchor="middle" font-size="11" fill="#8ea4ca">Ethereum (tuan rumah)</text>
+                <circle cx="70" cy="36" r="16" fill="rgba(87,224,230,.14)" stroke="#57E0E6"/><text x="70" y="41" text-anchor="middle" font-size="11" fill="#57E0E6">T1</text>
+                <circle cx="130" cy="36" r="16" fill="rgba(87,224,230,.14)" stroke="#57E0E6"/><text x="130" y="41" text-anchor="middle" font-size="11" fill="#57E0E6">T2</text>
+                <circle cx="190" cy="36" r="16" fill="rgba(87,224,230,.14)" stroke="#57E0E6"/><text x="190" y="41" text-anchor="middle" font-size="11" fill="#57E0E6">T3</text>
+              </svg>
+              <p style="font-size:.84rem;color:#8ea4ca;margin:.4rem 0 0">Banyak token bisa hidup di atas satu blockchain yang sama, memakai keamanannya.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.2 -->
+      <section id="jenis-aset">
+        <h2><span class="nmark">3.2</span> Empat Jenis Aset yang Penting Dikenali</h2>
+        <div class="grid grid-2">
+          <div class="card card--hover reveal"><h4>₿ Bitcoin (BTC) — Sang Pelopor</h4><p>Aset kripto pertama dan terbesar. Fokus utamanya sebagai penyimpan nilai dan aset cadangan digital — sering dijuluki “emas digital”. Desainnya menekankan keamanan dan kelangkaan (21 juta), bukan kecepatan atau fitur rumit.</p></div>
+          <div class="card card--hover reveal"><h4>Ξ Ethereum (ETH) — Komputer Dunia</h4><p>Jika Bitcoin adalah uang digital, Ethereum adalah platform membangun aplikasi. Inovasi terbesarnya: <strong>smart contract</strong>. Sebagian besar inovasi kripto modern (DeFi, NFT, token) lahir di atasnya.</p></div>
+          <div class="card card--hover reveal"><h4>◎ Altcoins — Selain Bitcoin</h4><p>Istilah umum untuk semua aset selain Bitcoin. Banyak menawarkan fitur spesifik — kecepatan tinggi atau biaya rendah (mis. Solana, Cardano). Kualitasnya sangat beragam, dari proyek serius hingga berisiko tinggi.</p></div>
+          <div class="card card--hover reveal"><h4>$ Stablecoin — Penjaga Stabilitas</h4><p>Dirancang mempertahankan nilai stabil, biasanya dipatok 1:1 terhadap dolar AS. Menjadi “tempat berlindung” dari volatilitas tanpa keluar dari ekosistem kripto. <a href="#stablecoin">Dibahas lebih dalam di 3.5</a>.</p></div>
+        </div>
+      </section>
+
+      <!-- 3.3 -->
+      <section id="defi">
+        <h2><span class="nmark">3.3</span> DeFi (Decentralized Finance) Lebih Dalam</h2>
+        <p>DeFi adalah upaya membangun ulang layanan keuangan tradisional — menukar, meminjam, meminjamkan, menyimpan — di atas blockchain, tanpa bank atau perantara. Semuanya berjalan melalui <em>smart contract</em> yang transparan.</p>
+
+        <h3>DEX (Decentralized Exchange)</h3>
+        <p>Bursa terdesentralisasi memungkinkan pengguna menukar aset langsung dari dompet mereka, tanpa menitipkan dana ke pihak ketiga. Banyak DEX memakai mekanisme <strong>Automated Market Maker (AMM)</strong> — harga ditentukan otomatis oleh rasio aset dalam sebuah “kolam likuiditas” (<em>liquidity pool</em>). Contoh: Uniswap, PancakeSwap.</p>
+
+        <div class="viz reveal" data-viz>
+          <p class="viz__cap">Liquidity pool &amp; AMM <span class="tag">interaktif</span></p>
+          <div class="viz-seg">
+            <button data-state="before">Pool seimbang</button>
+            <button data-state="after">Setelah banyak beli Token A</button>
+          </div>
+          <div data-show="before">
+            <svg viewBox="0 0 600 150" role="img" aria-label="Kolam likuiditas dengan rasio seimbang.">
+              <ellipse cx="300" cy="80" rx="180" ry="55" fill="rgba(108,156,255,.10)" stroke="#6C9CFF"/>
+              <circle cx="230" cy="80" r="34" fill="rgba(87,224,230,.16)" stroke="#57E0E6" class="glow-cyan"/><text x="230" y="78" text-anchor="middle" font-size="12" fill="#57E0E6">Token A</text><text x="230" y="94" text-anchor="middle" font-size="12" fill="#d6e2f7">1000</text>
+              <circle cx="370" cy="80" r="34" fill="rgba(230,198,103,.16)" stroke="#E6C667" class="glow-gold"/><text x="370" y="78" text-anchor="middle" font-size="12" fill="#E6C667">Token B</text><text x="370" y="94" text-anchor="middle" font-size="12" fill="#d6e2f7">1000</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip">Rasio 1 : 1</span><span class="viz-chip"><span class="d d-cyan"></span>Harga A = harga B</span><span class="viz-chip mono">A × B = k (konstan)</span></div>
+            <p class="viz__note">Harga ditentukan oleh rasio aset di dalam kolam, mengikuti rumus <span class="mono">x·y = k</span> — bukan buku pesanan.</p>
+          </div>
+          <div data-show="after">
+            <svg viewBox="0 0 600 150" role="img" aria-label="Token A berkurang, Token B bertambah; harga A naik.">
+              <ellipse cx="300" cy="80" rx="180" ry="55" fill="rgba(108,156,255,.10)" stroke="#6C9CFF"/>
+              <circle cx="235" cy="80" r="24" fill="rgba(87,224,230,.16)" stroke="#57E0E6"/><text x="235" y="78" text-anchor="middle" font-size="11" fill="#57E0E6">Token A</text><text x="235" y="93" text-anchor="middle" font-size="11" fill="#d6e2f7">700</text>
+              <circle cx="372" cy="80" r="42" fill="rgba(230,198,103,.16)" stroke="#E6C667" class="glow-gold"/><text x="372" y="78" text-anchor="middle" font-size="12" fill="#E6C667">Token B</text><text x="372" y="95" text-anchor="middle" font-size="12" fill="#d6e2f7">1430</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-cyan"></span>Token A makin langka → harganya naik</span><span class="viz-chip mono">A × B ≈ k tetap</span></div>
+            <p class="viz__note">Membeli Token A mengurangi stoknya di kolam; karena makin langka, <strong style="color:#57E0E6">harganya otomatis naik</strong>. Begitulah AMM menyesuaikan harga sendiri.</p>
+          </div>
+        </div>
+
+        <h3>Lending &amp; Borrowing</h3>
+        <p>Protokol seperti Aave dan Compound memungkinkan pengguna meminjamkan aset untuk bunga, atau meminjam aset lain dengan menjaminkan miliknya. Khas DeFi: pinjaman umumnya <strong>over-collateralized</strong> — nilai jaminan harus lebih besar dari pinjaman, karena tidak ada penilaian kredit personal.</p>
+
+        <h3>TVL (Total Value Locked)</h3>
+        <p>Metrik populer untuk mengukur “ukuran” protokol DeFi: total nilai aset yang dikunci di dalamnya. Semakin tinggi TVL, umumnya semakin besar kepercayaan dan aktivitas — <strong>meski bukan jaminan keamanan</strong>.</p>
+      </section>
+
+      <!-- 3.4 -->
+      <section id="staking">
+        <h2><span class="nmark">3.4</span> Staking dan Yield</h2>
+        <p>Aset kripto tidak harus sekadar “disimpan dan menunggu naik”. Ada beberapa cara membuat aset bekerja menghasilkan imbal hasil — masing-masing dengan risikonya sendiri.</p>
+
+        <h3>Staking</h3>
+        <p>Pada jaringan Proof of Stake, Anda bisa “menjaminkan” aset untuk membantu mengamankan jaringan, dan menerima <em>staking rewards</em>. Mirip mendapat bunga, tetapi aset Anda berkontribusi pada operasi jaringan. Beberapa jaringan butuh minimum tertentu (Ethereum: 32 ETH untuk validator penuh).</p>
+
+        <h3>Liquid Staking</h3>
+        <p>Masalah staking biasa: aset terkunci dan tidak bisa dipakai. <strong>Liquid staking</strong> (dipopulerkan Lido) menyiasati ini: Anda staking, lalu menerima token bukti (mis. stETH) yang tetap bisa digunakan di tempat lain — aset “bekerja ganda”, meski menambah lapisan risiko.</p>
+
+        <h3>Yield Farming &amp; Liquidity Pool</h3>
+        <p>Strategi menyediakan likuiditas ke protokol DeFi untuk memperoleh imbalan. Imbal hasil dinyatakan dalam <span class="mono">APR</span> atau <span class="mono">APY</span> (yang memperhitungkan bunga berbunga).</p>
+
+        <div class="callout callout--risk">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div class="callout__body">
+            <strong class="callout__t">Risiko: Impermanent Loss</strong>
+            <p>Saat menyediakan likuiditas berupa sepasang aset, perubahan harga relatif di antara keduanya dapat menyebabkan nilai aset Anda saat ditarik lebih kecil dibanding jika hanya menyimpannya. Imbal hasil tinggi (APY besar) <strong>tidak otomatis menguntungkan</strong> jika impermanent loss-nya juga besar.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.5 -->
+      <section id="stablecoin">
+        <h2><span class="nmark">3.5</span> Stablecoin Lebih Dalam</h2>
+        <p>Tidak semua stablecoin diciptakan sama. Cara mereka menjaga nilai sangat menentukan tingkat risikonya.</p>
+        <div class="grid grid-3">
+          <div class="card reveal"><h4>Fiat-backed</h4><p>Dijamin cadangan dolar/aset setara di rekening. Contoh: <span class="mono">USDT, USDC</span>. Paling banyak dipakai; risiko bergantung pada transparansi &amp; kecukupan cadangan.</p></div>
+          <div class="card reveal"><h4>Crypto-backed</h4><p>Dijamin aset kripto lain yang dikunci, biasanya <em>over-collateralized</em>. Contoh: <span class="mono">DAI</span>. Lebih terdesentralisasi, tetapi lebih kompleks.</p></div>
+          <div class="card reveal"><h4>Algorithmic</h4><p>Menjaga nilai lewat mekanisme algoritmik tanpa jaminan penuh. Jenis ini terbukti <strong>paling rapuh</strong>.</p></div>
+        </div>
+
+        <div class="callout callout--risk">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <div class="callout__body">
+            <strong class="callout__t">Pelajaran dari Kasus Depeg</strong>
+            <p><strong>Depeg</strong> adalah kondisi ketika stablecoin kehilangan patokan nilainya. Dua contoh historis: keruntuhan <strong>UST (Terra/Luna)</strong> pada Mei 2022, di mana stablecoin algoritmik memicu “death spiral” yang melenyapkan nilai puluhan miliar dolar; serta <strong>USDC</strong> yang sempat turun ke ~0,87 dolar pada Maret 2023 akibat kekhawatiran terhadap bank tempat cadangannya, sebelum pulih. Pesannya: kata “stable” <strong>tidak berarti tanpa risiko</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.6 -->
+      <section id="nft">
+        <h2><span class="nmark">3.6</span> NFT (Non-Fungible Token)</h2>
+        <p>Jika aset kripto biasa bersifat <em>fungible</em> (setiap unit identik dan bisa saling tukar, seperti uang), NFT bersifat <strong>non-fungible</strong> — setiap token unik dan tidak tergantikan. NFT berfungsi sebagai sertifikat kepemilikan digital atas suatu objek: karya seni digital, item game, musik, hingga representasi aset dunia nyata. Standar umum di Ethereum: <span class="mono">ERC-721</span> (item unik tunggal) dan <span class="mono">ERC-1155</span> (koleksi lebih fleksibel).</p>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Fungible vs Non-Fungible <span class="tag">skema</span></p>
+          <div class="vcompare">
+            <div class="vcol vcol--a">
+              <h5><span class="dotc"></span>Fungible (mis. 1 ETH)</h5>
+              <svg viewBox="0 0 260 70" role="img" aria-label="Empat koin identik yang bisa saling tukar.">
+                <g fill="rgba(87,224,230,.14)" stroke="#57E0E6"><circle cx="40" cy="35" r="22"/><circle cx="100" cy="35" r="22"/><circle cx="160" cy="35" r="22"/><circle cx="220" cy="35" r="22"/></g>
+                <g fill="#57E0E6" font-size="11" text-anchor="middle"><text x="40" y="39">◉</text><text x="100" y="39">◉</text><text x="160" y="39">◉</text><text x="220" y="39">◉</text></g>
+              </svg>
+              <p style="font-size:.84rem;color:#8ea4ca;margin:.4rem 0 0">Semua unit identik &amp; setara — bisa saling tukar tanpa kehilangan nilai.</p>
+            </div>
+            <div class="vcol vcol--b">
+              <h5><span class="dotc"></span>Non-Fungible (NFT)</h5>
+              <svg viewBox="0 0 260 70" role="img" aria-label="Empat token unik dengan nomor berbeda.">
+                <g fill="rgba(230,198,103,.12)" stroke="#E6C667"><rect x="18" y="13" width="44" height="44" rx="8"/><rect x="78" y="13" width="44" height="44" rx="8"/><rect x="138" y="13" width="44" height="44" rx="8"/><rect x="198" y="13" width="44" height="44" rx="8"/></g>
+                <g fill="#E6C667" font-size="10" text-anchor="middle"><text x="40" y="39">#001</text><text x="100" y="39">#002</text><text x="160" y="39">#003</text><text x="220" y="39">#004</text></g>
+              </svg>
+              <p style="font-size:.84rem;color:#8ea4ca;margin:.4rem 0 0">Tiap token unik &amp; tak tergantikan — punya identitas sendiri, tak bisa ditukar 1:1.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Ilustrasi galeri seni digital NFT bergaya cyberpunk: bingkai-bingkai karya generatif bercahaya neon di dinding gelap navy, refleksi lantai, aksen emas. Sinematik, modern, tanpa teks." data-ai-file="assets/img/bab3-nft.webp">
+          <img alt="Galeri NFT digital" data-src="assets/img/bab3-nft.webp" loading="lazy" />
+          <figcaption class="ai-img__ph">
+            <svg class="ai-img__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
+            <span class="ai-img__tag">Slot gambar · auto-isi</span>
+            <span class="ai-img__prompt">Galeri seni digital NFT — ilustrasi cyberpunk navy/neon.</span>
+            <span class="ai-img__meta">assets/img/bab3-nft.webp</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 3.7 -->
+      <section id="tokenomics">
+        <h2><span class="nmark">3.7</span> Tokenomics: Ekonomi di Balik Token</h2>
+        <p>Tokenomics (gabungan “token” dan “economics”) adalah studi faktor ekonomi yang memengaruhi nilai sebuah aset. Memahaminya penting untuk menilai apakah proyek sehat.</p>
+        <div class="grid grid-2">
+          <div class="tile reveal"><h4>Pasokan (Supply)</h4><p><em>Circulating</em> (beredar saat ini), <em>total</em> (sudah ada), dan <em>max supply</em> (batas maksimal). Aset dengan max supply tetap bersifat deflasioner secara desain.</p></div>
+          <div class="tile reveal"><h4>Inflasi vs Deflasi</h4><p>Apakah pasokan bertambah (inflasi) atau berkurang (deflasi) seiring waktu? Ini memengaruhi tekanan harga jangka panjang.</p></div>
+          <div class="tile reveal"><h4>Token Burning</h4><p>Penghancuran sejumlah token secara permanen untuk mengurangi pasokan — strategi menambah kelangkaan.</p></div>
+          <div class="tile reveal"><h4>Vesting &amp; Alokasi</h4><p>Bagaimana token dibagikan (tim, investor awal, komunitas) dan jadwal pelepasannya. Pelepasan besar di kemudian hari bisa menekan harga.</p></div>
+        </div>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Tiga ukuran pasokan token <span class="tag">data</span></p>
+          <div class="meter">
+            <div class="meter__lbl"><span>Circulating supply · beredar sekarang</span><b>contoh 40%</b></div>
+            <div class="meter__track"><div class="meter__fill" data-w="40%"></div></div>
+          </div>
+          <div class="meter">
+            <div class="meter__lbl"><span>Total supply · sudah dibuat</span><b>contoh 65%</b></div>
+            <div class="meter__track"><div class="meter__fill" data-w="65%"></div></div>
+          </div>
+          <div class="meter">
+            <div class="meter__lbl"><span>Max supply · batas maksimal</span><b>100%</b></div>
+            <div class="meter__track"><div class="meter__fill gold" data-w="100%"></div></div>
+          </div>
+          <p class="viz__note">Selisih besar antara <strong>circulating</strong> dan <strong>max supply</strong> menandakan banyak token belum beredar — berpotensi menimbulkan tekanan dilusi di masa depan (lihat juga <a href="bab-4-investasi.html#sentimen" style="color:#57E0E6">FDV di Bab 4</a>).</p>
+        </div>
+      </section>
+
+      <!-- 3.8 -->
+      <section id="pendukung">
+        <h2><span class="nmark">3.8</span> Konsep Pendukung Lainnya</h2>
+
+        <h3>Gas Fees (Biaya Transaksi)</h3>
+        <p>“Gas” adalah biaya untuk melakukan transaksi atau menjalankan smart contract (di Ethereum diukur dalam <span class="mono">Gwei</span>). Besarnya bervariasi tergantung kepadatan jaringan: makin ramai, makin mahal — salah satu alasan utama lahirnya Layer 2.</p>
+
+        <h3>Jenis Token Berdasarkan Fungsi</h3>
+        <div class="grid grid-2">
+          <div class="tile reveal"><h4>Utility Token</h4><p>Memberi akses ke produk atau layanan tertentu dalam sebuah ekosistem.</p></div>
+          <div class="tile reveal"><h4>Governance Token</h4><p>Memberi hak suara dalam pengambilan keputusan sebuah protokol.</p></div>
+          <div class="tile reveal"><h4>Security Token</h4><p>Mewakili kepemilikan aset finansial dan tunduk pada regulasi sekuritas.</p></div>
+          <div class="tile reveal"><h4>Meme Coin</h4><p>Lahir dari budaya internet/meme; nilainya sangat spekulatif dan digerakkan sentimen komunitas — <strong>risiko sangat tinggi</strong>.</p></div>
+        </div>
+
+        <h3>Web3 dan DAO</h3>
+        <p><strong>Web3</strong> adalah visi generasi internet berikutnya di atas blockchain, di mana pengguna memiliki kendali lebih besar atas data dan aset digitalnya. <strong>DAO</strong> (Decentralized Autonomous Organization) adalah organisasi yang dikelola kolektif oleh pemegang token melalui pemungutan suara, tanpa struktur manajemen terpusat tradisional.</p>
+
+        <h3>Bridge dan Interoperabilitas</h3>
+        <p>Karena ada banyak blockchain berbeda, dibutuhkan “jembatan” (<strong>bridge</strong>) untuk memindahkan aset antarjaringan. Bridge memperluas kemungkinan, tetapi secara historis menjadi <strong>salah satu titik yang paling sering diretas</strong> — perlu kehati-hatian ekstra.</p>
+
+        <h3>Oracle (Penghubung Data Dunia Nyata)</h3>
+        <p>Smart contract tidak bisa mengakses data luar blockchain secara langsung. <strong>Oracle</strong> menjembatani ini — memasok data dunia nyata (harga aset, hasil pertandingan, cuaca) ke dalam smart contract secara tepercaya. <span class="mono">Chainlink (LINK)</span> adalah penyedia oracle paling dikenal.</p>
+      </section>
+    </article>
+
+    <aside class="toc" aria-label="Daftar isi halaman">
+      <p class="toc__title">Di halaman ini</p>
+      <ul>
+        <li><a href="#koin-token">3.1 Koin vs token</a></li>
+        <li><a href="#jenis-aset">3.2 Empat jenis aset</a></li>
+        <li><a href="#defi">3.3 DeFi lebih dalam</a></li>
+        <li><a href="#staking">3.4 Staking &amp; yield</a></li>
+        <li><a href="#stablecoin">3.5 Stablecoin</a></li>
+        <li><a href="#nft">3.6 NFT</a></li>
+        <li><a href="#tokenomics">3.7 Tokenomics</a></li>
+        <li><a href="#pendukung">3.8 Konsep pendukung</a></li>
+      </ul>
+      <p class="toc__read" data-readtime></p>
+    </aside>
+  </div>
+
+  <nav class="pager" id="site-pager" aria-label="Navigasi bab"></nav>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/viz.js"></script>
+</body>
+</html>

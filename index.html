@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="blue">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Memahami Aset Kripto — Panduan Lengkap dari Dasar hingga Lanjutan</title>
+<meta name="description" content="Panduan pembelajaran aset kripto dari dasar hingga lanjutan: blockchain, Bitcoin, DeFi, investasi, keamanan, dan regulasi Indonesia. Disusun untuk edukasi & literasi keuangan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/viz.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="main">
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <svg class="hero__net" viewBox="0 0 1180 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="dotg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#C9A227" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#C9A227" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <g stroke="#5b76ad" stroke-width="1" opacity=".5">
+        <line x1="120" y1="80" x2="320" y2="180"/><line x1="320" y1="180" x2="240" y2="360"/>
+        <line x1="320" y1="180" x2="540" y2="120"/><line x1="540" y1="120" x2="700" y2="260"/>
+        <line x1="700" y1="260" x2="900" y2="180"/><line x1="900" y1="180" x2="1040" y2="320"/>
+        <line x1="700" y1="260" x2="560" y2="400"/><line x1="240" y1="360" x2="560" y2="400"/>
+        <line x1="900" y1="180" x2="1080" y2="90"/><line x1="540" y1="120" x2="700" y2="260"/>
+        <line x1="160" y1="440" x2="240" y2="360"/><line x1="560" y1="400" x2="820" y2="430"/>
+      </g>
+      <g fill="#7fa0d8">
+        <circle cx="120" cy="80" r="4"/><circle cx="320" cy="180" r="6"/><circle cx="540" cy="120" r="5"/>
+        <circle cx="700" cy="260" r="7"/><circle cx="900" cy="180" r="5"/><circle cx="1040" cy="320" r="4"/>
+        <circle cx="240" cy="360" r="5"/><circle cx="560" cy="400" r="6"/><circle cx="1080" cy="90" r="4"/>
+        <circle cx="160" cy="440" r="4"/><circle cx="820" cy="430" r="5"/>
+      </g>
+      <circle cx="700" cy="260" r="34" fill="url(#dotg)"/>
+    </svg>
+
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow hero__eyebrow">Panduan Pembelajaran Lengkap</p>
+        <h1>Memahami<br /><span class="gold">Aset Kripto</span></h1>
+        <p class="hero__lead">Dari konsep paling dasar hingga lanjutan — blockchain, Bitcoin, DeFi, strategi investasi, keamanan, dan regulasi Indonesia. Disusun jujur, seimbang antara peluang dan risiko.</p>
+        <div class="hero__cta">
+          <a href="pendahuluan.html" class="btn btn--gold">Mulai dari Pendahuluan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="glosarium.html" class="btn btn--ghost">Buka Glosarium</a>
+        </div>
+        <div class="hero__stats">
+          <div><div class="num">8</div><div class="lbl">Bab Materi</div></div>
+          <div><div class="num">50+</div><div class="lbl">Istilah Glosarium</div></div>
+          <div><div class="num">40+</div><div class="lbl">Tools Tepercaya</div></div>
+        </div>
+      </div>
+
+      <div class="hero__art">
+        <!-- Stylized coin / blockchain emblem -->
+        <svg viewBox="0 0 360 360" width="100%" aria-hidden="true">
+          <defs>
+            <linearGradient id="coing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#E0C25C"/><stop offset="100%" stop-color="#C9A227"/>
+            </linearGradient>
+            <linearGradient id="ringg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6C9CFF"/><stop offset="100%" stop-color="#2563EB"/>
+            </linearGradient>
+          </defs>
+          <circle cx="180" cy="180" r="150" fill="none" stroke="url(#ringg)" stroke-width="2" opacity=".4" stroke-dasharray="6 10"/>
+          <circle cx="180" cy="180" r="118" fill="none" stroke="url(#ringg)" stroke-width="3" opacity=".6"/>
+          <circle cx="180" cy="180" r="92" fill="url(#coing)"/>
+          <circle cx="180" cy="180" r="92" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="3"/>
+          <text x="180" y="218" text-anchor="middle" font-family="Spectral, serif" font-size="96" font-weight="700" fill="#2a2105">฿</text>
+          <g fill="#6C9CFF"><circle cx="180" cy="30" r="7"/><circle cx="330" cy="180" r="7"/><circle cx="180" cy="330" r="7"/><circle cx="30" cy="180" r="7"/></g>
+          <g fill="#C9A227"><circle cx="286" cy="74" r="5"/><circle cx="286" cy="286" r="5"/><circle cx="74" cy="286" r="5"/><circle cx="74" cy="74" r="5"/></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== DISCLAIMER STRIP ====================== -->
+  <section class="section" style="padding-block: clamp(34px,4vw,48px)">
+    <div class="shell">
+      <div class="callout callout--risk reveal" style="margin:0">
+        <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+        <div class="callout__body">
+          <strong class="callout__t">Disclaimer — Bukan Nasihat Investasi</strong>
+          <p>Dokumen ini disusun untuk tujuan edukasi dan literasi keuangan. Seluruh isinya bukan ajakan, rekomendasi, atau nasihat investasi. Aset kripto adalah instrumen berisiko tinggi. Selalu lakukan riset mandiri (<em>Do Your Own Research</em>) dan pahami profil risiko Anda sebelum mengambil keputusan apa pun.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CHAPTER INDEX ====================== -->
+  <section class="section section--tint">
+    <div class="shell">
+      <div class="section__head center reveal">
+        <p class="eyebrow" style="justify-content:center">Peta Materi</p>
+        <h2>Delapan bab, satu alur belajar</h2>
+        <p>Materi disusun berlapis mengikuti alur yang logis: dari pertanyaan paling mendasar menuju teknologi, ekosistem, investasi, keamanan, regulasi, hingga sumber belajar. Baca berurutan, atau langsung loncat ke topik yang Anda butuhkan.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <a href="bab-1-dasar-dasar.html" class="card card--hover chcard reveal">
+          <span class="num">01</span>
+          <h3>Dasar-Dasar Aset Kripto</h3>
+          <p>Definisi, asal-usul Bitcoin, masalah yang dipecahkan, dan mengapa kripto bisa bernilai.</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="bab-2-teknologi.html" class="card card--hover chcard reveal">
+          <span class="num">02</span>
+          <h3>Teknologi di Balik Kripto</h3>
+          <p>Blockchain, mekanisme konsensus (PoW &amp; PoS), Layer 1 vs Layer 2, dan dompet.</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="bab-3-ekosistem.html" class="card card--hover chcard reveal">
+          <span class="num">03</span>
+          <h3>Ekosistem &amp; Jenis Aset</h3>
+          <p>Koin vs token, DeFi, staking &amp; yield, stablecoin, NFT, tokenomics, dan konsep pendukung.</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="bab-4-investasi.html" class="card card--hover chcard reveal">
+          <span class="num">04</span>
+          <h3>Investasi &amp; Analisis</h3>
+          <p>Karakteristik, siklus pasar, halving, tiga pendekatan analisis, dan strategi (DCA, HODL).</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="bab-5-risiko-keamanan.html" class="card card--hover chcard reveal">
+          <span class="num">05</span>
+          <h3>Risiko &amp; Keamanan</h3>
+          <p>Empat kategori risiko, self-custody, jenis penipuan, dan daftar tanda bahaya.</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="bab-6-regulasi.html" class="card card--hover chcard reveal">
+          <span class="num">06</span>
+          <h3>Regulasi &amp; Pajak</h3>
+          <p>Status hukum, peralihan ke OJK, POJK, pajak PMK 50/2025, platform berizin, dan CBDC.</p>
+          <span class="more">Baca bab →</span>
+        </a>
+        <a href="tools.html" class="card card--hover chcard reveal">
+          <span class="num">07</span>
+          <h3>Tools &amp; Sumber Belajar</h3>
+          <p>Direktori alat tepercaya yang dapat difilter: data pasar, on-chain, charting, berita, akun X.</p>
+          <span class="more">Buka direktori →</span>
+        </a>
+        <a href="glosarium.html" class="card card--hover chcard reveal">
+          <span class="num">08</span>
+          <h3>Glosarium Istilah</h3>
+          <p>50+ istilah penting yang sering Anda jumpai, dapat dicari dan disusun alfabetis.</p>
+          <span class="more">Buka glosarium →</span>
+        </a>
+        <div class="card chcard reveal" style="background:var(--navy);color:#eaf0fb;border-color:transparent">
+          <span class="num" style="color:var(--gold);opacity:.5">★</span>
+          <h3 style="color:#fff">Mulai perjalananmu</h3>
+          <p style="color:#b9c6dc">Belum tahu harus mulai dari mana? Baca Pendahuluan untuk memahami cara memakai panduan ini.</p>
+          <a href="pendahuluan.html" class="more" style="color:var(--gold)">Buka pendahuluan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== THREE PRINCIPLES ====================== -->
+  <section class="section">
+    <div class="shell">
+      <div class="section__head reveal">
+        <p class="eyebrow">Prinsip Pemandu</p>
+        <h2>Tiga prinsip yang memandu seluruh materi</h2>
+        <p>Apa pun bab yang Anda baca, tiga prinsip ini berlaku sebagai kompas.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l7-4 7 4M5 7l-2 6a4 4 0 0 0 4 0l-2-6M19 7l-2 6a4 4 0 0 0 4 0l-2-6"/></svg></div>
+          <h3>Seimbang Peluang &amp; Risiko</h3>
+          <p>Tidak ada pembahasan peluang tanpa risikonya. Imbal hasil tinggi selalu beriringan dengan kemungkinan kerugian yang sama besar.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>DYOR — Riset Mandiri</h3>
+          <p>Tidak ada satu pun sumber kebenaran tunggal, termasuk panduan ini. Kami memberi kerangka berpikir; keputusan akhir ada di tangan Anda.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"/></svg></div>
+          <h3>Legal &amp; Logis (2L)</h3>
+          <p>Pastikan setiap platform <strong>Legal</strong> (berizin) dan imbal hasilnya <strong>Logis</strong> (masuk akal). Janji untung pasti tanpa risiko adalah penanda penipuan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== CTA ====================== -->
+  <section class="section section--tint">
+    <div class="shell center reveal">
+      <p class="eyebrow" style="justify-content:center">Siap Belajar?</p>
+      <h2 style="max-width:18ch;margin-inline:auto">Mulai dari fondasi, naik selapis demi selapis.</h2>
+      <p style="color:var(--muted);max-width:48ch;margin:1rem auto 1.8rem">Tidak perlu latar belakang teknis. Cukup rasa ingin tahu dan kemauan untuk berpikir kritis.</p>
+      <a href="bab-1-dasar-dasar.html" class="btn btn--solid">Masuk ke Bab 1 — Dasar-Dasar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/viz.js"></script>
+</body>
+</html>

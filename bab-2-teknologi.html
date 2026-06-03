@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="blue">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bab 2 — Teknologi di Balik Aset Kripto</title>
+<meta name="description" content="Blockchain sebagai buku kas bersama, mekanisme konsensus PoW & PoS, Layer 1 vs Layer 2, blockchain trilemma, dan dompet (wallet) sebagai pintu akses aset." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/viz.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="main">
+  <header class="chap-hero">
+    <div class="chap-hero__inner">
+      <p class="kicker">Bab 2 · Teknologi</p>
+      <h1>Teknologi di Balik Aset Kripto</h1>
+      <p>Aset kripto adalah lapisan yang terlihat di permukaan. Di bawahnya ada mesin teknologi yang membuat semuanya bekerja: blockchain sebagai fondasi pencatatan, konsensus sebagai penjaga kesepakatan, arsitektur berlapis untuk skalabilitas, dan dompet sebagai pintu akses Anda.</p>
+    </div>
+  </header>
+
+  <div class="chap-layout">
+    <article class="prose">
+      <!-- 2.1 -->
+      <section id="blockchain">
+        <h2><span class="nmark">2.1</span> Blockchain: Buku Kas Raksasa Bersama</h2>
+        <p class="lead">Bayangkan blockchain sebagai buku kas (ledger) besar yang mencatat setiap transaksi — tetapi salinannya dipegang serentak oleh ribuan komputer di seluruh dunia.</p>
+        <p>Setiap kali ada transaksi baru, semua salinan diperbarui agar tetap identik. Disebut “blockchain” (rantai blok) karena transaksi dikelompokkan ke dalam <strong>blok</strong>, dan setiap blok baru dirantai ke blok sebelumnya menggunakan sidik jari digital yang disebut <strong>hash</strong>.</p>
+
+        <div class="diagram reveal">
+          <p class="diagram__cap">Anatomi rantai blok</p>
+          <div class="blockrow">
+            <div class="blk"><div class="bn">Blok #100</div><div class="bx">Transaksi</div><div class="bh">hash: 0a3f…b1</div></div>
+            <div class="lnk"></div>
+            <div class="blk"><div class="bn">Blok #101</div><div class="bx">Transaksi</div><div class="bh">prev: 0a3f…b1</div></div>
+            <div class="lnk"></div>
+            <div class="blk"><div class="bn">Blok #102</div><div class="bx">Transaksi</div><div class="bh">prev: 7c9d…e2</div></div>
+            <div class="lnk"></div>
+            <div class="blk" style="border-style:dashed"><div class="bn">Blok #103</div><div class="bx">…berikutnya</div><div class="bh">prev: 4b81…aa</div></div>
+          </div>
+        </div>
+
+        <h3>Alur sebuah transaksi</h3>
+        <ol>
+          <li><strong>Transaksi diinisiasi</strong> — seseorang mengirim aset kripto ke alamat lain.</li>
+          <li><strong>Verifikasi</strong> — jaringan memeriksa keabsahan transaksi (apakah pengirim benar-benar memiliki aset dan berhak memindahkannya).</li>
+          <li><strong>Masuk ke dalam blok</strong> — transaksi sah dikumpulkan bersama transaksi lain ke dalam satu blok baru.</li>
+          <li><strong>Dirantai melalui hash</strong> — blok baru dikunci secara kriptografis ke blok sebelumnya, membentuk rantai berkesinambungan.</li>
+        </ol>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Alur sebuah transaksi <span class="tag">pipeline</span></p>
+          <div class="flow">
+            <div class="flow__step" data-tip="Inisiasi|Pemilik aset menandatangani transaksi dengan kunci privatnya dan menyiarkannya ke jaringan."><div class="flow__n">01</div><div class="flow__t">Inisiasi</div><div class="flow__d">Seseorang mengirim aset ke alamat lain.</div></div>
+            <div class="flow__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="flow__step" data-tip="Verifikasi|Node memeriksa apakah pengirim benar-benar memiliki aset dan berhak memindahkannya."><div class="flow__n">02</div><div class="flow__t">Verifikasi</div><div class="flow__d">Jaringan memeriksa keabsahan.</div></div>
+            <div class="flow__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="flow__step" data-tip="Masuk blok|Transaksi sah dikumpulkan bersama transaksi lain ke dalam satu blok baru."><div class="flow__n">03</div><div class="flow__t">Masuk Blok</div><div class="flow__d">Dikumpulkan ke blok baru.</div></div>
+            <div class="flow__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="flow__step" data-tip="Dirantai|Blok dikunci kriptografis ke blok sebelumnya lewat hash — menjadi permanen."><div class="flow__n">04</div><div class="flow__t">Dirantai</div><div class="flow__d">Dikunci permanen via hash.</div></div>
+          </div>
+          <p class="viz__note">Arahkan kursor / ketuk tiap tahap untuk penjelasan.</p>
+        </div>
+
+        <div class="callout callout--tip">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <div class="callout__body">
+            <strong class="callout__t">Sifat Kunci: Immutable (Tidak Dapat Diubah)</strong>
+            <p>Setelah transaksi tercatat dalam blok dan dirantai, data praktis tidak dapat diubah atau dihapus. Untuk memalsukan satu catatan, seseorang harus mengubah blok itu beserta seluruh blok sesudahnya di mayoritas komputer jaringan secara bersamaan — sesuatu yang praktis mustahil pada jaringan besar. Inilah yang membuat blockchain dapat dipercaya tanpa perlu memercayai satu pihak pun.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2.2 -->
+      <section id="konsensus">
+        <h2><span class="nmark">2.2</span> Mekanisme Konsensus: Bagaimana Jaringan Sepakat</h2>
+        <p>Jika tidak ada bank atau otoritas pusat, siapa yang memutuskan transaksi mana yang sah? Jawabannya adalah <strong>mekanisme konsensus</strong> — seperangkat aturan yang membuat ribuan komputer yang tidak saling mengenal bisa mencapai kesepakatan. Dua yang terpenting:</p>
+
+        <h3>Proof of Work (PoW) — Bukti Kerja</h3>
+        <p>Diperkenalkan pertama kali oleh Bitcoin. Komputer khusus yang disebut <strong>penambang (miners)</strong> berlomba memecahkan teka-teki matematis rumit. Penambang pertama yang berhasil mendapat hak menambahkan blok berikutnya dan menerima imbalan aset kripto baru. Proses ini membutuhkan daya komputasi dan energi listrik besar.</p>
+
+        <h3>Proof of Stake (PoS) — Bukti Kepemilikan</h3>
+        <p>Alternatif yang jauh lebih hemat energi. Alih-alih perlombaan komputasi, hak memvalidasi blok diberikan kepada peserta yang <strong>“menjaminkan” (stake)</strong> sejumlah aset sebagai jaminan. Validator dipilih sebagian acak, sebagian berdasarkan jumlah jaminan. Jika berbuat curang, jaminan bisa hangus (disebut <em>slashing</em>).</p>
+
+        <div class="viz reveal" data-viz>
+          <p class="viz__cap">Dua cara jaringan mencapai sepakat <span class="tag">interaktif</span></p>
+          <div class="viz-seg">
+            <button data-state="pow">Proof of Work</button>
+            <button data-state="pos">Proof of Stake</button>
+          </div>
+          <div data-show="pow">
+            <svg viewBox="0 0 600 170" role="img" aria-label="Tiga penambang berlomba memecahkan teka-teki; satu menang.">
+              <g>
+                <rect x="30" y="45" width="120" height="80" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/><text x="90" y="80" text-anchor="middle" font-size="12" fill="#8ea4ca">Penambang</text><text x="90" y="100" text-anchor="middle" font-size="20" fill="#ff7a8a">⚡</text>
+                <rect x="170" y="45" width="120" height="80" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/><text x="230" y="80" text-anchor="middle" font-size="12" fill="#8ea4ca">Penambang</text><text x="230" y="100" text-anchor="middle" font-size="20" fill="#ff7a8a">⚡</text>
+                <rect x="310" y="40" width="130" height="90" rx="10" fill="rgba(230,198,103,.12)" stroke="#E6C667" class="glow-gold"/><text x="375" y="76" text-anchor="middle" font-size="12" fill="#E6C667">Pemenang</text><text x="375" y="100" text-anchor="middle" font-size="13" fill="#E6C667">✓ +blok</text>
+              </g>
+              <path d="M455 85 L520 85" stroke="#57E0E6" stroke-width="2" marker-end="url(#pa)"/>
+              <defs><marker id="pa" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="#57E0E6"/></marker></defs>
+              <text x="525" y="80" font-size="11" fill="#8ea4ca">imbalan</text><text x="525" y="95" font-size="11" fill="#8ea4ca">kripto baru</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-red"></span>Energi sangat tinggi</span><span class="viz-chip"><span class="d d-cyan"></span>Sangat aman &amp; teruji</span><span class="viz-chip"><span class="d d-blue"></span>Contoh: Bitcoin</span></div>
+            <p class="viz__note">Komputer berlomba memecahkan teka-teki matematis. Yang pertama berhasil menambahkan blok dan menerima imbalan — butuh daya komputasi besar.</p>
+          </div>
+          <div data-show="pos">
+            <svg viewBox="0 0 600 170" role="img" aria-label="Validator menjaminkan aset; satu dipilih untuk memvalidasi blok.">
+              <g>
+                <rect x="30" y="50" width="110" height="70" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/><text x="85" y="82" text-anchor="middle" font-size="12" fill="#8ea4ca">Validator</text><text x="85" y="102" text-anchor="middle" font-size="15" fill="#E6C667">◉ stake</text>
+                <rect x="160" y="45" width="120" height="80" rx="10" fill="rgba(87,224,230,.12)" stroke="#57E0E6" class="glow-cyan"/><text x="220" y="78" text-anchor="middle" font-size="12" fill="#57E0E6">Terpilih</text><text x="220" y="100" text-anchor="middle" font-size="13" fill="#57E0E6">✓ validasi</text>
+                <rect x="300" y="50" width="110" height="70" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/><text x="355" y="82" text-anchor="middle" font-size="12" fill="#8ea4ca">Validator</text><text x="355" y="102" text-anchor="middle" font-size="15" fill="#E6C667">◉ stake</text>
+              </g>
+              <g data-tip="Slashing|Jika validator berbuat curang, sebagian jaminannya bisa hangus — insentif untuk jujur.">
+                <rect x="440" y="55" width="130" height="60" rx="10" fill="rgba(255,122,138,.10)" stroke="#ff7a8a"/><text x="505" y="80" text-anchor="middle" font-size="11" fill="#ff7a8a">curang →</text><text x="505" y="98" text-anchor="middle" font-size="12" fill="#ff7a8a">jaminan hangus</text>
+              </g>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-green"></span>Energi sangat rendah</span><span class="viz-chip"><span class="d d-cyan"></span>Cepat &amp; mudah diskalakan</span><span class="viz-chip"><span class="d d-blue"></span>Contoh: Ethereum, Solana</span></div>
+            <p class="viz__note">Hak validasi diberikan kepada yang menjaminkan aset. Curang → jaminan hangus (<em>slashing</em>). Klik kotak merah untuk detail.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="data">
+            <caption>Perbandingan PoW vs PoS</caption>
+            <thead><tr><th>Aspek</th><th>Proof of Work (PoW)</th><th>Proof of Stake (PoS)</th></tr></thead>
+            <tbody>
+              <tr><td class="col-h">Dasar keamanan</td><td>Daya komputasi &amp; energi</td><td>Aset yang dijaminkan (stake)</td></tr>
+              <tr><td class="col-h">Konsumsi energi</td><td><span class="cell-no">Sangat tinggi</span></td><td><span class="cell-yes">Sangat rendah</span></td></tr>
+              <tr><td class="col-h">Peran utama</td><td>Penambang (miners)</td><td>Validator</td></tr>
+              <tr><td class="col-h">Risiko kecurangan</td><td>Butuh menguasai mayoritas daya</td><td>Jaminan bisa hangus (slashing)</td></tr>
+              <tr><td class="col-h">Contoh</td><td>Bitcoin</td><td>Ethereum, Solana, Cardano</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--info">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg></span>
+          <div class="callout__body"><p>Ethereum beralih dari PoW ke PoS melalui pembaruan besar bernama <strong>“The Merge” (2022)</strong>, yang memangkas konsumsi energinya lebih dari 99%.</p></div>
+        </div>
+      </section>
+
+      <!-- 2.3 -->
+      <section id="layer">
+        <h2><span class="nmark">2.3</span> Layer 1 vs Layer 2 &amp; Blockchain Trilemma</h2>
+        <p>Seiring meningkatnya pengguna, muncul tantangan klasik: blockchain yang aman dan terdesentralisasi cenderung lambat dan mahal saat ramai. Tantangan ini dirumuskan sebagai <strong>Blockchain Trilemma</strong> — sulitnya mencapai tiga hal sekaligus secara maksimal:</p>
+
+        <div class="grid grid-3">
+          <div class="tile reveal"><h4>Keamanan</h4><p>Ketahanan jaringan terhadap serangan.</p></div>
+          <div class="tile reveal"><h4>Desentralisasi</h4><p>Seberapa tersebar kendali atas jaringan.</p></div>
+          <div class="tile reveal"><h4>Skalabilitas</h4><p>Kemampuan memproses banyak transaksi dengan cepat dan murah.</p></div>
+        </div>
+        <p style="margin-top:1.2rem">Mengoptimalkan satu sisi sering mengorbankan sisi lain. Untuk mengatasinya, dikembangkan arsitektur berlapis:</p>
+
+        <div class="diagram reveal">
+          <p class="diagram__cap">Arsitektur berlapis</p>
+          <div class="stack">
+            <div class="layer l2"><div class="lt">Layer 2 — Skalabilitas</div><div class="ls">Memproses transaksi cepat &amp; murah, lalu menitipkan ringkasannya ke L1. Contoh: Arbitrum, Optimism, Base, zkSync.</div></div>
+            <div class="between">↑ menitipkan ringkasan transaksi ke ↓</div>
+            <div class="layer l1"><div class="lt">Layer 1 — Lapisan Dasar</div><div class="ls">Blockchain utama yang menjalankan keamanannya sendiri. Aset aslinya disebut “koin”. Contoh: Bitcoin, Ethereum, Solana.</div></div>
+          </div>
+        </div>
+
+        <h3>Dua pendekatan rollup pada Layer 2</h3>
+        <div class="grid grid-2">
+          <div class="card reveal"><h4>Optimistic Rollup</h4><p>Mengasumsikan transaksi valid kecuali ada yang membuktikan sebaliknya dalam periode tertentu. Contoh: <span class="mono">Arbitrum, Optimism, Base</span>.</p></div>
+          <div class="card reveal"><h4>Zero-Knowledge (ZK) Rollup</h4><p>Menggunakan bukti kriptografis untuk memastikan validitas transaksi sejak awal. Contoh: <span class="mono">zkSync, Starknet, Polygon zkEVM</span>.</p></div>
+        </div>
+      </section>
+
+      <!-- 2.4 -->
+      <section id="wallet">
+        <h2><span class="nmark">2.4</span> Dompet (Wallet): Pintu Akses ke Aset Anda</h2>
+        <p>Penting dipahami: dompet kripto <strong>tidak benar-benar “menyimpan” koin</strong> seperti dompet fisik menyimpan uang. Aset Anda selalu “ada” di blockchain. Yang disimpan dompet adalah <strong>kunci</strong> yang membuktikan kepemilikan dan memberi Anda hak memindahkannya.</p>
+
+        <h3>Kunci Publik dan Kunci Privat</h3>
+        <div class="keypair reveal">
+          <div class="kbox"><div class="kt">🔓 Kunci Publik</div><p>Ibarat <strong>nomor rekening</strong> — boleh dibagikan agar orang lain bisa mengirim aset kepada Anda.</p></div>
+          <div class="kbox priv"><div class="kt">🔑 Kunci Privat</div><p>Ibarat <strong>PIN dan tanda tangan sekaligus</strong> — sangat rahasia. Siapa pun yang memegangnya, menguasai aset Anda.</p></div>
+        </div>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Bagaimana sepasang kunci bekerja <span class="tag">skema</span></p>
+          <svg viewBox="0 0 600 150" role="img" aria-label="Transaksi ditandatangani kunci privat lalu diverifikasi siapa pun dengan kunci publik.">
+            <g data-tip="Rahasia|Hanya Anda yang memegang kunci privat. Inilah yang memberi kendali penuh atas aset.">
+              <rect x="20" y="45" width="130" height="60" rx="10" fill="rgba(255,122,138,.10)" stroke="#ff7a8a"/><text x="85" y="70" text-anchor="middle" font-size="12" fill="#ff7a8a">🔑 Kunci Privat</text><text x="85" y="90" text-anchor="middle" font-size="11" fill="#8ea4ca">menandatangani</text>
+            </g>
+            <path d="M152 75 L228 75" stroke="#57E0E6" stroke-width="2" marker-end="url(#ka)"/>
+            <g><rect x="230" y="50" width="140" height="50" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/><text x="300" y="80" text-anchor="middle" font-size="12" fill="#d6e2f7">Transaksi tertanda</text></g>
+            <path d="M372 75 L448 75" stroke="#57E0E6" stroke-width="2" marker-end="url(#ka)"/>
+            <g data-tip="Boleh dibagikan|Kunci publik seperti nomor rekening — siapa pun bisa memakainya untuk memverifikasi keaslian tanda tangan.">
+              <rect x="450" y="45" width="130" height="60" rx="10" fill="rgba(87,224,230,.12)" stroke="#57E0E6"/><text x="515" y="70" text-anchor="middle" font-size="12" fill="#57E0E6">🔓 Kunci Publik</text><text x="515" y="90" text-anchor="middle" font-size="11" fill="#8ea4ca">memverifikasi ✓</text>
+            </g>
+            <defs><marker id="ka" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="#57E0E6"/></marker></defs>
+          </svg>
+          <p class="viz__note">Tanda tangan dibuat dengan kunci <strong style="color:#ff7a8a">privat</strong> (rahasia), tetapi bisa diverifikasi siapa pun dengan kunci <strong style="color:#57E0E6">publik</strong> — tanpa pernah membocorkan yang privat.</p>
+        </div>
+
+        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Foto produk bergaya cyberpunk: hardware wallet (cold wallet) kripto di atas permukaan gelap reflektif dengan aksen cahaya neon biru dan emas, sirkuit kabur di latar. Sinematik, fokus tajam, tanpa teks/merek." data-ai-file="assets/img/bab2-hardware-wallet.webp">
+          <img alt="Hardware wallet kripto" data-src="assets/img/bab2-hardware-wallet.webp" loading="lazy" />
+          <figcaption class="ai-img__ph">
+            <svg class="ai-img__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="15" r="2"/><path d="M9 7h6"/></svg>
+            <span class="ai-img__tag">Slot gambar · auto-isi</span>
+            <span class="ai-img__prompt">Hardware wallet (cold wallet) — foto produk cyberpunk navy/neon.</span>
+            <span class="ai-img__meta">assets/img/bab2-hardware-wallet.webp</span>
+          </figcaption>
+        </figure>
+
+        <h3>Seed Phrase (Frasa Pemulihan)</h3>
+        <p>Saat membuat dompet non-kustodian, Anda diberi <strong>seed phrase</strong> — biasanya 12 atau 24 kata acak. Ini cadangan induk dari kunci privat Anda. Jika perangkat hilang, aset bisa dipulihkan selama Anda memiliki seed phrase. Sebaliknya, jika seed phrase hilang atau dicuri, aset bisa lenyap selamanya — <strong>tidak ada tombol “lupa password”</strong>.</p>
+
+        <h3>Custodial vs Non-Custodial</h3>
+        <p>Salah satu konsep terpenting bagi pemula. Pada dompet <strong>custodial</strong> (titip), kunci privat dipegang pihak ketiga — biasanya bursa. Mudah, tetapi Anda bergantung pada pihak itu. Pada dompet <strong>non-custodial</strong> (mandiri), Andalah satu-satunya pemegang kunci privat — lebih bertanggung jawab, tetapi kendali penuh.</p>
+
+        <div class="adage reveal">
+          <q>Not Your Keys, Not Your Coins</q>
+          <p>Jika kunci privat aset Anda dipegang pihak lain (misalnya bursa), maka secara teknis aset itu belum sepenuhnya berada dalam kendali Anda. Memindahkan aset jangka panjang ke dompet mandiri adalah salah satu praktik keamanan paling mendasar.</p>
+        </div>
+
+        <h3>Hot Wallet vs Cold Wallet</h3>
+        <div class="table-wrap reveal">
+          <table class="data">
+            <caption>Jenis dompet mandiri berdasarkan penyimpanan</caption>
+            <thead><tr><th>Jenis</th><th>Sifat</th><th>Keamanan</th><th>Cocok untuk</th></tr></thead>
+            <tbody>
+              <tr><td class="col-h">Hot Wallet</td><td>Terhubung internet (aplikasi/ekstensi browser)</td><td>Praktis, tetapi lebih terpapar risiko online</td><td>Transaksi harian, dana kecil–menengah</td></tr>
+              <tr><td class="col-h">Cold Wallet</td><td>Offline (perangkat keras khusus)</td><td><span class="cell-yes">Paling aman dari serangan online</span></td><td>Penyimpanan jangka panjang, dana besar</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--note">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg></span>
+          <div class="callout__body"><p>Nama-nama produk dompet dan bursa di <a href="tools.html">Bab 7</a> disebut hanya sebagai contoh umum yang banyak digunakan, <strong>bukan rekomendasi</strong>. Selalu verifikasi keaslian dan legalitas setiap platform sebelum digunakan.</p></div>
+        </div>
+      </section>
+    </article>
+
+    <aside class="toc" aria-label="Daftar isi halaman">
+      <p class="toc__title">Di halaman ini</p>
+      <ul>
+        <li><a href="#blockchain">2.1 Blockchain</a></li>
+        <li><a href="#konsensus">2.2 Mekanisme konsensus</a></li>
+        <li><a href="#layer">2.3 Layer 1 vs Layer 2</a></li>
+        <li><a href="#wallet">2.4 Dompet (wallet)</a></li>
+      </ul>
+      <p class="toc__read" data-readtime></p>
+    </aside>
+  </div>
+
+  <nav class="pager" id="site-pager" aria-label="Navigasi bab"></nav>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/viz.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id" data-accent="blue">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bab 1 — Dasar-Dasar Aset Kripto</title>
+<meta name="description" content="Apa itu aset kripto: definisi, karakteristik inti, asal mula Bitcoin, masalah yang dipecahkan, mengapa kripto bernilai, dan posisinya di dunia keuangan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/tokens.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/viz.css" />
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="main">
+  <header class="chap-hero">
+    <div class="chap-hero__inner">
+      <p class="kicker">Bab 1 · Dasar-Dasar</p>
+      <h1>Apa Itu Aset Kripto</h1>
+      <p>Sebelum membahas teknologi, investasi, atau strategi, kita perlu menyepakati satu hal mendasar: apa sebenarnya yang kita bicarakan ketika menyebut “aset kripto”. Bab ini membangun fondasi itu.</p>
+    </div>
+  </header>
+
+  <div class="chap-layout">
+    <article class="prose">
+      <!-- 1.1 -->
+      <section id="definisi">
+        <h2><span class="nmark">1.1</span> Definisi Aset Kripto</h2>
+        <p class="lead">Aset kripto adalah aset digital yang menggunakan kriptografi untuk mengamankan transaksi dan mengendalikan penciptaan unit barunya.</p>
+        <p>Berbeda dengan uang yang kita kenal sehari-hari, aset kripto <strong>tidak diterbitkan atau dijamin oleh bank sentral mana pun</strong>. Ia hidup dan beroperasi di atas jaringan komputer yang tersebar di seluruh dunia. Ada tiga karakteristik inti yang membedakannya dari uang konvensional maupun aset digital biasa:</p>
+
+        <div class="grid grid-3" style="margin-top:1.3rem">
+          <div class="card reveal">
+            <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></div>
+            <h4>Desentralisasi</h4>
+            <p>Tidak ada otoritas pusat tunggal yang mengatur, mencetak, atau membekukan aset. Kekuasaan tersebar di ribuan komputer (<em>node</em>) yang menjalankan dan memverifikasi jaringan bersama.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+            <h4>Digital Sepenuhnya</h4>
+            <p>Tidak ada wujud fisik. Yang ada hanyalah catatan kepemilikan dalam bentuk data yang aman secara kriptografis — kemampuan membuktikan secara matematis bahwa Anda berhak memindahkannya.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg></div>
+            <h4>Global &amp; Tanpa Batas</h4>
+            <p>Dapat dikirim dari satu pihak ke pihak lain di belahan dunia mana pun, kapan pun, dalam hitungan menit. Tidak ada jam operasional bank, hari libur, atau batas negara dalam arti teknis.</p>
+          </div>
+        </div>
+
+        <div class="viz reveal" data-viz>
+          <p class="viz__cap">Terpusat vs Terdesentralisasi <span class="tag">interaktif</span></p>
+          <div class="viz-seg">
+            <button data-state="cen">Sistem Terpusat (bank)</button>
+            <button data-state="dec">Terdesentralisasi (kripto)</button>
+          </div>
+          <div data-show="cen">
+            <svg class="netviz" viewBox="0 0 600 300" role="img" aria-label="Jaringan terpusat: semua node terhubung ke satu hub.">
+              <g>
+                <line x1="300" y1="150" x2="470" y2="150"/><line x1="300" y1="150" x2="420" y2="258"/><line x1="300" y1="150" x2="300" y2="280"/><line x1="300" y1="150" x2="180" y2="258"/><line x1="300" y1="150" x2="130" y2="150"/><line x1="300" y1="150" x2="180" y2="42"/><line x1="300" y1="150" x2="300" y2="20"/><line x1="300" y1="150" x2="420" y2="42"/>
+              </g>
+              <g>
+                <circle class="node" cx="470" cy="150" r="13"/><circle class="node" cx="420" cy="258" r="13"/><circle class="node" cx="300" cy="280" r="13"/><circle class="node" cx="180" cy="258" r="13"/><circle class="node" cx="130" cy="150" r="13"/><circle class="node" cx="180" cy="42" r="13"/><circle class="node" cx="300" cy="20" r="13"/><circle class="node" cx="420" cy="42" r="13"/>
+              </g>
+              <circle class="hub glow-gold" cx="300" cy="150" r="26" data-tip="Titik tunggal kegagalan|Jika hub (bank/otoritas) bermasalah, seluruh sistem terdampak. Satu pihak dapat membekukan atau mengubah aturan."/>
+              <text x="300" y="155" text-anchor="middle" font-size="13" fill="#E6C667">HUB</text>
+            </svg>
+            <p class="viz__note">Semua bergantung pada satu otoritas pusat. Praktis, tetapi ada <strong style="color:#E6C667">titik tunggal kegagalan</strong> — klik hub untuk detail.</p>
+          </div>
+          <div data-show="dec">
+            <svg class="netviz" viewBox="0 0 600 300" role="img" aria-label="Jaringan terdesentralisasi: banyak node saling terhubung tanpa pusat.">
+              <g>
+                <line x1="110" y1="80" x2="230" y2="60"/><line x1="230" y1="60" x2="360" y2="90"/><line x1="360" y1="90" x2="480" y2="70"/><line x1="480" y1="70" x2="520" y2="180"/><line x1="520" y1="180" x2="430" y2="250"/><line x1="430" y1="250" x2="300" y2="230"/><line x1="300" y1="230" x2="170" y2="250"/><line x1="170" y1="250" x2="90" y2="180"/><line x1="90" y1="180" x2="110" y2="80"/><line x1="230" y1="60" x2="300" y2="230"/><line x1="360" y1="90" x2="300" y2="230"/><line x1="110" y1="80" x2="300" y2="230"/><line x1="480" y1="70" x2="300" y2="230"/><line x1="90" y1="180" x2="360" y2="90"/><line x1="520" y1="180" x2="230" y2="60"/><line x1="170" y1="250" x2="360" y2="90"/>
+              </g>
+              <g>
+                <circle class="node glow-blue" cx="110" cy="80" r="12"/><circle class="node glow-blue" cx="230" cy="60" r="12"/><circle class="node glow-blue" cx="360" cy="90" r="12"/><circle class="node glow-blue" cx="480" cy="70" r="12"/><circle class="node glow-blue" cx="520" cy="180" r="12"/><circle class="node glow-blue" cx="430" cy="250" r="12"/><circle class="node glow-blue" cx="300" cy="230" r="12" data-tip="Tanpa pusat|Tidak ada satu titik yang bisa mematikan jaringan. Ribuan node memverifikasi bersama; aturan tak bisa diubah sepihak."/><circle class="node glow-blue" cx="170" cy="250" r="12"/><circle class="node glow-blue" cx="90" cy="180" r="12"/>
+              </g>
+            </svg>
+            <p class="viz__note">Kekuasaan tersebar di ribuan <strong style="color:#57E0E6">node</strong> yang setara. Tidak ada satu titik yang bisa mematikan seluruh sistem — klik salah satu node.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.2 -->
+      <section id="asal-mula">
+        <h2><span class="nmark">1.2</span> Asal Mula: Lahirnya Bitcoin</h2>
+        <p>Untuk memahami mengapa aset kripto diciptakan, kita perlu kembali ke tahun 2008 — saat dunia keuangan global diguncang krisis. Runtuhnya lembaga keuangan raksasa dan dana talangan besar-besaran menumbuhkan ketidakpercayaan terhadap sistem perbankan tradisional yang sangat bergantung pada perantara terpusat.</p>
+        <p>Di tengah suasana itu, pada Oktober 2008, sosok (atau kelompok) dengan nama samaran <strong>Satoshi Nakamoto</strong> menerbitkan dokumen pendek berjudul <em>“Bitcoin: A Peer-to-Peer Electronic Cash System”</em>. Dokumen sembilan halaman ini — dikenal sebagai <strong>whitepaper Bitcoin</strong> — memaparkan gagasan sistem uang elektronik yang memungkinkan dua pihak bertransaksi langsung tanpa lembaga keuangan.</p>
+        <p>Gagasan itu menjadi kenyataan pada Januari 2009, ketika blok pertama jaringan Bitcoin — disebut <strong>Genesis Block</strong> — resmi “ditambang”. Di dalamnya, Satoshi menyisipkan potongan judul berita surat kabar tentang dana talangan perbankan — sebuah pesan simbolis tentang alasan kelahiran Bitcoin.</p>
+
+        <div class="diagram reveal">
+          <p class="diagram__cap">Tiga tonggak kelahiran Bitcoin</p>
+          <ul class="timeline">
+            <li><span class="dot"></span><span class="yr">2008</span><div class="ev">Krisis keuangan global</div><p>Kepercayaan pada perbankan terpusat terkikis akibat krisis dan dana talangan publik.</p></li>
+            <li><span class="dot"></span><span class="yr">Oktober 2008</span><div class="ev">Whitepaper Bitcoin terbit</div><p>Satoshi Nakamoto mempublikasikan gagasan uang elektronik peer-to-peer tanpa perantara.</p></li>
+            <li class="gold"><span class="dot"></span><span class="yr">Januari 2009</span><div class="ev">Genesis Block ditambang</div><p>Blok pertama resmi beroperasi — menandai dimulainya era uang digital terdesentralisasi.</p></li>
+          </ul>
+        </div>
+
+        <figure class="ai-img ai-img--empty reveal" data-ai-prompt="Ilustrasi konseptual bergaya cyberpunk modern: dokumen whitepaper Bitcoin yang bercahaya melayang di atas latar biru-navy gelap dengan garis sirkuit neon dan grid, semburat emas. Sinematik, bersih, tanpa teks." data-ai-file="assets/img/bab1-genesis.webp">
+          <img alt="Ilustrasi kelahiran Bitcoin" data-src="assets/img/bab1-genesis.webp" loading="lazy" />
+          <figcaption class="ai-img__ph">
+            <svg class="ai-img__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <span class="ai-img__tag">Slot gambar · auto-isi</span>
+            <span class="ai-img__prompt">Whitepaper Bitcoin &amp; Genesis Block — ilustrasi cyberpunk navy/emas.</span>
+            <span class="ai-img__meta">assets/img/bab1-genesis.webp</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- 1.3 -->
+      <section id="masalah">
+        <h2><span class="nmark">1.3</span> Masalah yang Ingin Dipecahkan</h2>
+        <p>Aset kripto bukan sekadar “uang internet”. Ia lahir untuk memecahkan beberapa persoalan nyata yang selama ini sulit diatasi dalam sistem keuangan digital.</p>
+
+        <h3>Double Spending (Belanja Ganda)</h3>
+        <p>Persoalan klasik uang digital: bagaimana memastikan satu unit uang digital tidak dibelanjakan dua kali? File digital pada dasarnya mudah disalin. Sebelum Bitcoin, satu-satunya solusi adalah memercayakan pencatatan kepada perantara terpusat seperti bank. <strong>Bitcoin memecahkan ini tanpa perantara</strong>, melalui catatan publik bersama yang diverifikasi seluruh jaringan.</p>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Mengapa satu koin tak bisa dipakai dua kali <span class="tag">skema</span></p>
+          <svg viewBox="0 0 600 240" role="img" aria-label="Satu koin digital dicoba dikirim ke dua penerima; jaringan hanya mengesahkan satu.">
+            <circle cx="90" cy="120" r="34" fill="#1c2c4e" stroke="#E6C667" stroke-width="2.5" class="glow-gold"/>
+            <text x="90" y="129" text-anchor="middle" font-size="26" fill="#E6C667">₿</text>
+            <text x="90" y="185" text-anchor="middle" font-size="12" fill="#8ea4ca">1 koin</text>
+            <path d="M132 105 L250 60" stroke="#57E0E6" stroke-width="2.5" marker-end="url(#ar1)" class="glow-cyan"/>
+            <path d="M132 135 L250 180" stroke="#ff7a8a" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#ar2)"/>
+            <defs>
+              <marker id="ar1" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#57E0E6"/></marker>
+              <marker id="ar2" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#ff7a8a"/></marker>
+            </defs>
+            <g data-tip="Disahkan|Jaringan mencatat transaksi ini lebih dulu dan memverifikasinya. Sah.">
+              <rect x="258" y="34" width="150" height="52" rx="10" fill="rgba(87,224,230,.12)" stroke="#57E0E6"/>
+              <text x="333" y="58" text-anchor="middle" font-size="13" fill="#d6e2f7">Penerima A</text>
+              <text x="333" y="76" text-anchor="middle" font-size="12" fill="#57E0E6">✓ SAH</text>
+            </g>
+            <g data-tip="Ditolak|Koin yang sama sudah tercatat terpakai. Jaringan menolak upaya kedua — belanja ganda gagal.">
+              <rect x="258" y="154" width="150" height="52" rx="10" fill="rgba(255,122,138,.10)" stroke="#ff7a8a"/>
+              <text x="333" y="178" text-anchor="middle" font-size="13" fill="#d6e2f7">Penerima B</text>
+              <text x="333" y="196" text-anchor="middle" font-size="12" fill="#ff7a8a">✕ DITOLAK</text>
+            </g>
+            <g transform="translate(470,90)">
+              <rect x="0" y="0" width="110" height="60" rx="10" fill="rgba(20,32,54,.7)" stroke="#26395f"/>
+              <text x="55" y="26" text-anchor="middle" font-size="11" fill="#8ea4ca">buku kas</text>
+              <text x="55" y="44" text-anchor="middle" font-size="11" fill="#8ea4ca">publik</text>
+            </g>
+            <path d="M412 60 L470 110" stroke="#6C9CFF" stroke-width="1.6" opacity=".5"/>
+          </svg>
+          <p class="viz__note">Jaringan hanya mengesahkan transaksi yang tercatat lebih dulu. Upaya membelanjakan koin yang sama untuk kedua kalinya otomatis ditolak — klik tiap kotak untuk detail.</p>
+        </div>
+
+        <h3>Kepercayaan (Trust)</h3>
+        <p>Sistem keuangan konvensional menempatkan kepercayaan pada pihak ketiga — bank, lembaga kliring, prosesor pembayaran. Aset kripto menggeser kepercayaan dari “institusi” ke “matematika dan kode”. Filosofi ini sering diringkas sebagai <em>“code is law”</em>: aturan ditegakkan oleh program transparan yang dapat diperiksa siapa pun.</p>
+
+        <h3>Akses (Unbanked)</h3>
+        <p>Miliaran orang tidak memiliki akses ke layanan perbankan karena hambatan administratif dan geografis. Dengan aset kripto, siapa pun yang memiliki smartphone dan koneksi internet secara teknis dapat memiliki “rekening” digital untuk menyimpan dan memindahkan nilai, tanpa persetujuan lembaga mana pun.</p>
+      </section>
+
+      <!-- 1.4 -->
+      <section id="nilai">
+        <h2><span class="nmark">1.4</span> Mengapa Aset Kripto Bisa Bernilai?</h2>
+        <p>Pertanyaan paling sering dari pemula: jika tidak ada wujud fisik dan tidak dijamin pemerintah, mengapa aset kripto bisa punya harga? Jawabannya terletak pada empat sifat yang, jika digabungkan, menciptakan nilai — mirip dengan apa yang membuat emas bernilai.</p>
+
+        <div class="grid grid-2">
+          <div class="tile reveal"><h4>Kelangkaan (Scarcity)</h4><p>Banyak aset kripto memiliki batas pasokan yang ditetapkan dalam kode dan tak bisa diubah. Bitcoin hanya akan pernah ada <strong>21 juta keping — selamanya</strong>.</p></div>
+          <div class="tile reveal"><h4>Portabilitas (Portability)</h4><p>Nilai dalam jumlah berapa pun dapat dibawa hanya dengan mengingat sederet kata kunci (<em>seed phrase</em>). Mudah dipindahkan lintas negara dan sangat sulit dipalsukan.</p></div>
+          <div class="tile reveal"><h4>Utilitas (Utility)</h4><p>Sebagian aset bukan sekadar penyimpan nilai, tetapi “bahan bakar” untuk menjalankan aplikasi, <em>smart contract</em>, dan layanan keuangan terdesentralisasi.</p></div>
+          <div class="tile reveal"><h4>Konsensus (Consensus)</h4><p>Pada akhirnya, aset bernilai karena cukup banyak orang sepakat ia bernilai. Jaringan jutaan pengguna adalah sumber nilai paling fundamental.</p></div>
+        </div>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Kelangkaan terverifikasi: pasokan Bitcoin <span class="tag">data</span></p>
+          <div class="meter">
+            <div class="meter__lbl"><span>Sudah ditambang</span><b>≈ 19,8 juta</b></div>
+            <div class="meter__track"><div class="meter__fill gold" data-w="94%"></div></div>
+          </div>
+          <div class="meter">
+            <div class="meter__lbl"><span>Batas maksimal (hard cap)</span><b>21 juta · selamanya</b></div>
+            <div class="meter__track"><div class="meter__fill" data-w="100%"></div></div>
+          </div>
+          <div class="viz-legend">
+            <span class="viz-chip"><span class="d d-gold"></span>≈ 94% pasokan sudah beredar</span>
+            <span class="viz-chip"><span class="d d-cyan"></span>Sisa ≈ 1,2 juta ditambang perlahan hingga ± 2140</span>
+          </div>
+          <p class="viz__note">Batas 21 juta keping ditetapkan dalam kode dan tak bisa diubah — inilah fondasi <strong style="color:#E6C667">kelangkaan</strong> yang dapat diverifikasi siapa pun.</p>
+        </div>
+      </section>
+
+      <!-- 1.5 -->
+      <section id="posisi">
+        <h2><span class="nmark">1.5</span> Posisi Aset Kripto di Dunia Keuangan</h2>
+        <p>Untuk menempatkannya dalam perspektif, berikut peran aset kripto yang sudah nyata dalam sistem keuangan saat ini:</p>
+
+        <div class="grid grid-3">
+          <div class="card card--hover reveal"><h4>Remitansi</h4><p>Transfer lintas negara via perbankan sering lambat dan mahal. Transfer kripto bisa tuntas dalam menit dengan biaya jauh lebih rendah.</p></div>
+          <div class="card card--hover reveal"><h4>DeFi</h4><p>Ekosistem layanan keuangan — meminjam, meminjamkan, menukar, menyimpan — yang berjalan otomatis lewat program, tanpa perantara. <a href="bab-3-ekosistem.html#defi">Dibahas di Bab 3</a>.</p></div>
+          <div class="card card--hover reveal"><h4>Lindung Nilai</h4><p>Sebagian investor memandang Bitcoin sebagai “emas digital” untuk menyimpan kekayaan dari penurunan daya beli akibat inflasi — masih diperdebatkan.</p></div>
+        </div>
+
+        <div class="callout callout--note">
+          <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg></span>
+          <div class="callout__body"><p>Pandangan “emas digital” masih diperdebatkan dan bergantung pada banyak faktor, tetapi merupakan salah satu narasi utama yang menggerakkan permintaan terhadap Bitcoin.</p></div>
+        </div>
+      </section>
+    </article>
+
+    <aside class="toc" aria-label="Daftar isi halaman">
+      <p class="toc__title">Di halaman ini</p>
+      <ul>
+        <li><a href="#definisi">1.1 Definisi</a></li>
+        <li><a href="#asal-mula">1.2 Asal mula Bitcoin</a></li>
+        <li><a href="#masalah">1.3 Masalah yang dipecahkan</a></li>
+        <li><a href="#nilai">1.4 Mengapa bernilai?</a></li>
+        <li><a href="#posisi">1.5 Posisi di dunia keuangan</a></li>
+      </ul>
+      <p class="toc__read" data-readtime></p>
+    </aside>
+  </div>
+
+  <nav class="pager" id="site-pager" aria-label="Navigasi bab"></nav>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/viz.js"></script>
+</body>
+</html>
