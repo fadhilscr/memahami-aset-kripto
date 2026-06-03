@@ -117,6 +117,18 @@
         "<p><strong>Bukan nasihat keuangan.</strong> Seluruh materi bersifat edukasi. Aset kripto sangat fluktuatif dan berisiko tinggi — selalu lakukan riset mandiri (DYOR) dan pertimbangkan profil risiko Anda sebelum berinvestasi.</p>" +
         '<span class="disclaimer__tag">DYOR · Edukasi</span>' +
       "</div></div>" +
+      '<div class="footer-credit">' +
+        '<span class="footer-credit__by">Dibuat oleh</span>' +
+        '<a href="https://instagram.com/fadhilscr1707" target="_blank" rel="noopener noreferrer">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>' +
+          '@fadhilscr1707' +
+        "</a>" +
+        '<span class="footer-credit__sep">·</span>' +
+        '<a href="https://www.linkedin.com/in/fadhil-muhammad-hafizd" target="_blank" rel="noopener noreferrer">' +
+          '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>' +
+          'Fadhil Muhammad Hafizd' +
+        "</a>" +
+      "</div>" +
     "</footer>";
 
   var fmount = document.getElementById("site-footer");
