@@ -359,3 +359,21 @@
 :root:not([data-theme="dark"]) .diagram .halving__step .yr    { color: var(--v-line); }
 :root:not([data-theme="dark"]) .diagram .halving__step .reward { color: var(--v-ink); }
 :root:not([data-theme="dark"]) .diagram .halving__step .reward small { color: var(--v-mut); }
+
+/* Light mode: remap hardcoded neon palette inside legacy inline SVGs so labels
+   stay readable on the light panel. CSS fill/stroke overrides SVG presentation
+   attributes; scoped to .viz/.diagram and light theme only (dark unchanged). */
+:root:not([data-theme="dark"]) .viz [fill="#d6e2f7"], :root:not([data-theme="dark"]) .diagram [fill="#d6e2f7"] { fill: var(--v-ink); }
+:root:not([data-theme="dark"]) .viz [fill="#8ea4ca"], :root:not([data-theme="dark"]) .diagram [fill="#8ea4ca"] { fill: var(--v-mut); }
+:root:not([data-theme="dark"]) .viz [fill="#57E0E6"], :root:not([data-theme="dark"]) .diagram [fill="#57E0E6"] { fill: var(--v-cyan); }
+:root:not([data-theme="dark"]) .viz [fill="#E6C667"], :root:not([data-theme="dark"]) .diagram [fill="#E6C667"] { fill: var(--v-gold); }
+:root:not([data-theme="dark"]) .viz [fill="#6C9CFF"], :root:not([data-theme="dark"]) .diagram [fill="#6C9CFF"] { fill: var(--v-line); }
+:root:not([data-theme="dark"]) .viz [fill="#ff7a8a"], :root:not([data-theme="dark"]) .diagram [fill="#ff7a8a"] { fill: var(--v-red); }
+:root:not([data-theme="dark"]) .viz [fill="#5be0a0"], :root:not([data-theme="dark"]) .diagram [fill="#5be0a0"] { fill: var(--v-green); }
+/* strokes too (lines, connectors, candle outlines) */
+:root:not([data-theme="dark"]) .viz [stroke="#57E0E6"], :root:not([data-theme="dark"]) .diagram [stroke="#57E0E6"] { stroke: var(--v-cyan); }
+:root:not([data-theme="dark"]) .viz [stroke="#E6C667"], :root:not([data-theme="dark"]) .diagram [stroke="#E6C667"] { stroke: var(--v-gold); }
+:root:not([data-theme="dark"]) .viz [stroke="#6C9CFF"], :root:not([data-theme="dark"]) .diagram [stroke="#6C9CFF"] { stroke: var(--v-line); }
+:root:not([data-theme="dark"]) .viz [stroke="#ff7a8a"], :root:not([data-theme="dark"]) .diagram [stroke="#ff7a8a"] { stroke: var(--v-red); }
+:root:not([data-theme="dark"]) .viz [stroke="#5be0a0"], :root:not([data-theme="dark"]) .diagram [stroke="#5be0a0"] { stroke: var(--v-green); }
+:root:not([data-theme="dark"]) .viz [stroke="#26395f"], :root:not([data-theme="dark"]) .diagram [stroke="#26395f"] { stroke: var(--v-border); }
