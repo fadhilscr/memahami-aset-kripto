@@ -162,6 +162,61 @@
           <div class="tile reveal"><h4>Desentralisasi</h4><p>Seberapa tersebar kendali atas jaringan.</p></div>
           <div class="tile reveal"><h4>Skalabilitas</h4><p>Kemampuan memproses banyak transaksi dengan cepat dan murah.</p></div>
         </div>
+
+        <div class="viz reveal" data-viz>
+          <p class="viz__cap">Trilemma: umumnya hanya bisa dapat 2 dari 3 <span class="tag">interaktif</span></p>
+          <div class="viz-seg">
+            <button data-state="ad">Aman + Terdesentralisasi</button>
+            <button data-state="as">Aman + Skalabel</button>
+            <button data-state="ds">Terdesentralisasi + Skalabel</button>
+          </div>
+          <div data-show="ad">
+            <svg viewBox="0 0 600 240" role="img" aria-label="Segitiga trilemma menyoroti Keamanan dan Desentralisasi, mengorbankan Skalabilitas.">
+              <line x1="300" y1="48" x2="110" y2="196" stroke="var(--v-cyan)" stroke-width="3.5" class="glow-cyan"/>
+              <line x1="300" y1="48" x2="490" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <line x1="110" y1="196" x2="490" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <circle cx="300" cy="48" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <circle cx="110" cy="196" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <circle cx="490" cy="196" r="13" fill="var(--v-surf)" stroke="var(--v-mut)" stroke-width="1.5" opacity=".5"/>
+              <text x="300" y="32" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Desentralisasi</text>
+              <text x="100" y="222" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Keamanan</text>
+              <text x="498" y="222" text-anchor="middle" font-size="12" fill="var(--v-mut)" opacity=".6">Skalabilitas ✕</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-cyan"></span>Sangat aman &amp; tersebar</span><span class="viz-chip"><span class="d d-blue"></span>Contoh: Bitcoin, Ethereum L1</span></div>
+            <p class="viz__note">Prioritas keamanan &amp; desentralisasi membuat jaringan <strong>lebih lambat &amp; mahal saat ramai</strong> — inilah alasan utama lahirnya Layer 2.</p>
+          </div>
+          <div data-show="as">
+            <svg viewBox="0 0 600 240" role="img" aria-label="Segitiga trilemma menyoroti Keamanan dan Skalabilitas, mengorbankan Desentralisasi.">
+              <line x1="110" y1="196" x2="490" y2="196" stroke="var(--v-cyan)" stroke-width="3.5" class="glow-cyan"/>
+              <line x1="300" y1="48" x2="110" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <line x1="300" y1="48" x2="490" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <circle cx="300" cy="48" r="13" fill="var(--v-surf)" stroke="var(--v-mut)" stroke-width="1.5" opacity=".5"/>
+              <circle cx="110" cy="196" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <circle cx="490" cy="196" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <text x="300" y="32" text-anchor="middle" font-size="12" fill="var(--v-mut)" opacity=".6">Desentralisasi ✕</text>
+              <text x="100" y="222" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Keamanan</text>
+              <text x="498" y="222" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Skalabilitas</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-cyan"></span>Cepat &amp; aman</span><span class="viz-chip"><span class="d d-red"></span>Kendali lebih terpusat</span></div>
+            <p class="viz__note">Membatasi jumlah validator membuat jaringan cepat &amp; tetap aman, tetapi <strong style="color:var(--v-red)">kurang terdesentralisasi</strong> — lebih sedikit pihak yang mengendalikan.</p>
+          </div>
+          <div data-show="ds">
+            <svg viewBox="0 0 600 240" role="img" aria-label="Segitiga trilemma menyoroti Desentralisasi dan Skalabilitas, mengorbankan Keamanan.">
+              <line x1="300" y1="48" x2="490" y2="196" stroke="var(--v-cyan)" stroke-width="3.5" class="glow-cyan"/>
+              <line x1="300" y1="48" x2="110" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <line x1="110" y1="196" x2="490" y2="196" stroke="var(--v-border)" stroke-width="1.5"/>
+              <circle cx="300" cy="48" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <circle cx="110" cy="196" r="13" fill="var(--v-surf)" stroke="var(--v-mut)" stroke-width="1.5" opacity=".5"/>
+              <circle cx="490" cy="196" r="15" fill="rgba(87,224,230,.18)" stroke="var(--v-cyan)" stroke-width="2.5"/>
+              <text x="300" y="32" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Desentralisasi</text>
+              <text x="100" y="222" text-anchor="middle" font-size="12" fill="var(--v-red)">Keamanan ✕</text>
+              <text x="498" y="222" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Skalabilitas</text>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-cyan"></span>Cepat &amp; tersebar</span><span class="viz-chip"><span class="d d-red"></span>Keamanan lebih rapuh</span></div>
+            <p class="viz__note">Mengejar kecepatan &amp; desentralisasi sekaligus sering berisiko menurunkan keamanan — <strong style="color:var(--v-red)">lebih rentan</strong>, terutama pada jaringan muda yang belum teruji.</p>
+          </div>
+        </div>
+
         <p style="margin-top:1.2rem">Mengoptimalkan satu sisi sering mengorbankan sisi lain. Untuk mengatasinya, dikembangkan arsitektur berlapis:</p>
 
         <div class="diagram reveal">
@@ -223,6 +278,37 @@
 
         <h3>Custodial vs Non-Custodial</h3>
         <p>Salah satu konsep terpenting bagi pemula. Pada dompet <strong>custodial</strong> (titip), kunci privat dipegang pihak ketiga — biasanya bursa. Mudah, tetapi Anda bergantung pada pihak itu. Pada dompet <strong>non-custodial</strong> (mandiri), Andalah satu-satunya pemegang kunci privat — lebih bertanggung jawab, tetapi kendali penuh.</p>
+
+        <div class="viz reveal" data-viz>
+          <p class="viz__cap">Siapa yang memegang kunci? <span class="tag">interaktif</span></p>
+          <div class="viz-seg">
+            <button data-state="cust">Custodial (titip)</button>
+            <button data-state="noncust">Non-Custodial (mandiri)</button>
+          </div>
+          <div data-show="cust">
+            <svg viewBox="0 0 600 150" role="img" aria-label="Pada dompet custodial, kunci privat dipegang bursa di antara Anda dan blockchain.">
+              <rect x="20" y="52" width="120" height="50" rx="10" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="80" y="82" text-anchor="middle" font-size="13" fill="var(--v-ink)">Anda</text>
+              <path d="M142 77 H214" stroke="var(--v-line)" stroke-width="1.8" marker-end="url(#cu1)"/>
+              <rect x="216" y="42" width="150" height="70" rx="10" fill="rgba(230,198,103,.12)" stroke="var(--v-gold)" stroke-width="2" class="glow-gold"/><text x="291" y="68" text-anchor="middle" font-size="13" fill="var(--v-gold)">🔑 Bursa</text><text x="291" y="90" text-anchor="middle" font-size="10.5" fill="var(--v-mut)">memegang kunci</text>
+              <path d="M368 77 H440" stroke="var(--v-line)" stroke-width="1.8" marker-end="url(#cu1)"/>
+              <rect x="442" y="52" width="138" height="50" rx="10" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="511" y="82" text-anchor="middle" font-size="12" fill="var(--v-ink)">Blockchain</text>
+              <defs><marker id="cu1" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-line)"/></marker></defs>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-green"></span>Praktis &amp; mudah dipakai</span><span class="viz-chip"><span class="d d-red"></span>Bergantung pada pihak ketiga</span></div>
+            <p class="viz__note">Kunci dipegang bursa. Nyaman, tetapi jika bursa bermasalah (diretas/dibekukan), akses Anda ikut terdampak — <em>“not your keys, not your coins”</em>.</p>
+          </div>
+          <div data-show="noncust">
+            <svg viewBox="0 0 600 150" role="img" aria-label="Pada dompet non-custodial, Anda memegang kunci privat dan berinteraksi langsung dengan blockchain.">
+              <rect x="40" y="42" width="170" height="70" rx="10" fill="rgba(87,224,230,.12)" stroke="var(--v-cyan)" stroke-width="2" class="glow-cyan"/><text x="125" y="68" text-anchor="middle" font-size="13" fill="var(--v-cyan)">🔑 Anda</text><text x="125" y="90" text-anchor="middle" font-size="10.5" fill="var(--v-mut)">memegang kunci</text>
+              <path d="M212 77 H440" stroke="var(--v-cyan)" stroke-width="2" marker-end="url(#nc1)" class="glow-cyan"/>
+              <text x="326" y="68" text-anchor="middle" font-size="10" fill="var(--v-mut)">langsung, tanpa perantara</text>
+              <rect x="442" y="52" width="138" height="50" rx="10" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="511" y="82" text-anchor="middle" font-size="12" fill="var(--v-ink)">Blockchain</text>
+              <defs><marker id="nc1" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-cyan)"/></marker></defs>
+            </svg>
+            <div class="viz-legend"><span class="viz-chip"><span class="d d-cyan"></span>Kendali penuh atas aset</span><span class="viz-chip"><span class="d d-gold"></span>Tanggung jawab penuh di Anda</span></div>
+            <p class="viz__note">Hanya Anda pemegang kunci — tidak ada pihak yang bisa membekukan aset Anda. Konsekuensinya: kehilangan seed phrase berarti kehilangan akses, tanpa pemulihan.</p>
+          </div>
+        </div>
 
         <div class="adage reveal">
           <q>Not Your Keys, Not Your Coins</q>

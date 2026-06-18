@@ -163,6 +163,37 @@
         <p>Selain penipuan yang disengaja, ada pula risiko teknis. Smart contract adalah program, dan program bisa memiliki celah (<em>bug</em>) yang dieksploitasi peretas — sepanjang sejarah DeFi, eksploitasi semacam ini telah menyebabkan kerugian besar, terutama pada protokol baru yang belum teruji dan pada <strong>bridge antar-jaringan</strong>. Mengutamakan protokol yang sudah mapan, teraudit, dan teruji waktu adalah langkah kehati-hatian penting.</p>
         <p>Risiko lain yang perlu disadari: risiko regulasi dan pajak (<a href="bab-6-regulasi.html">Bab 6</a>) serta risiko likuiditas pada aset-aset kecil yang sulit dijual saat pasar sepi.</p>
 
+        <div class="viz reveal">
+          <p class="viz__cap">Tiga pilar penyangga keamanan aset <span class="tag">skema</span></p>
+          <svg viewBox="0 0 600 230" role="img" aria-label="Tiga pilar — uang dingin, diversifikasi, amankan kunci — menyangga keamanan aset.">
+            <!-- top beam -->
+            <rect x="40" y="26" width="520" height="36" rx="8" fill="rgba(230,198,103,.14)" stroke="var(--v-gold)" stroke-width="2" class="glow-gold"/>
+            <text x="300" y="50" text-anchor="middle" font-size="13" fill="var(--v-gold)" font-weight="700" letter-spacing="1">KEAMANAN ASET ANDA</text>
+            <!-- pillars -->
+            <g class="viz-hot" data-tip="Uang dingin|Hanya investasikan dana yang Anda relakan hilang — bukan dana darurat, kebutuhan pokok, atau pinjaman.">
+              <rect x="74" y="78" width="120" height="104" rx="8" fill="rgba(87,224,230,.10)" stroke="var(--v-cyan)" stroke-width="1.8"/>
+              <text x="134" y="118" text-anchor="middle" font-size="26">💧</text>
+              <text x="134" y="150" text-anchor="middle" font-size="12" fill="var(--v-ink)" font-weight="700">Uang dingin</text>
+              <text x="134" y="168" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">dana yang direlakan</text>
+            </g>
+            <g class="viz-hot" data-tip="Diversifikasi|Jangan menaruh semua telur dalam satu keranjang — sebar antaraset kripto maupun non-kripto.">
+              <rect x="240" y="78" width="120" height="104" rx="8" fill="rgba(87,224,230,.10)" stroke="var(--v-cyan)" stroke-width="1.8"/>
+              <text x="300" y="118" text-anchor="middle" font-size="26">🧺</text>
+              <text x="300" y="150" text-anchor="middle" font-size="12" fill="var(--v-ink)" font-weight="700">Diversifikasi</text>
+              <text x="300" y="168" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">sebar risiko</text>
+            </g>
+            <g class="viz-hot" data-tip="Amankan kunci|Aktifkan 2FA aplikasi, lindungi seed phrase secara offline, dan pertimbangkan cold wallet untuk dana besar.">
+              <rect x="406" y="78" width="120" height="104" rx="8" fill="rgba(87,224,230,.10)" stroke="var(--v-cyan)" stroke-width="1.8"/>
+              <text x="466" y="118" text-anchor="middle" font-size="26">🔐</text>
+              <text x="466" y="150" text-anchor="middle" font-size="12" fill="var(--v-ink)" font-weight="700">Amankan kunci</text>
+              <text x="466" y="168" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">2FA · seed · cold wallet</text>
+            </g>
+            <!-- base -->
+            <rect x="40" y="190" width="520" height="22" rx="6" fill="var(--v-surf)" stroke="var(--v-border)"/>
+          </svg>
+          <p class="viz__note">Ketiganya bekerja bersama — lemah di satu pilar melemahkan seluruhnya. Arahkan kursor / ketuk tiap pilar untuk ringkasannya.</p>
+        </div>
+
         <div class="callout callout--tip">
           <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"/></svg></span>
           <div class="callout__body">

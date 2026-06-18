@@ -151,6 +151,39 @@
         <h3>Yield Farming &amp; Liquidity Pool</h3>
         <p>Strategi menyediakan likuiditas ke protokol DeFi untuk memperoleh imbalan. Imbal hasil dinyatakan dalam <span class="mono">APR</span> atau <span class="mono">APY</span> (yang memperhitungkan bunga berbunga).</p>
 
+        <div class="viz reveal">
+          <p class="viz__cap">Tangga imbal hasil &amp; risiko <span class="tag">skema</span></p>
+          <svg viewBox="0 0 600 250" role="img" aria-label="Tiga tingkat: staking risiko rendah, liquid staking risiko sedang, yield farming risiko tinggi.">
+            <!-- axis -->
+            <path d="M34 222 H566" stroke="var(--v-border)" stroke-width="1.5"/>
+            <path d="M34 222 V24" stroke="var(--v-border)" stroke-width="1.5"/>
+            <text x="20" y="120" text-anchor="middle" font-size="10" fill="var(--v-mut)" transform="rotate(-90 20 120)" font-family="var(--font-mono)">imbal hasil &amp; risiko →</text>
+            <!-- rising trend arrow -->
+            <path d="M70 196 L520 60" fill="none" stroke="var(--v-gold)" stroke-width="1.6" stroke-dasharray="6 6" opacity=".6" marker-end="url(#yar)"/>
+            <defs><marker id="yar" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="var(--v-gold)"/></marker></defs>
+            <!-- step 1: Staking -->
+            <g class="viz-hot" data-tip="Staking|Menjaminkan aset di jaringan PoS untuk membantu mengamankannya & menerima reward. Paling sederhana, risiko relatif rendah (mis. lock-up & fluktuasi harga).">
+              <rect x="44" y="150" width="160" height="62" rx="9" fill="rgba(91,224,160,.12)" stroke="var(--v-green)" stroke-width="1.8"/>
+              <text x="124" y="176" text-anchor="middle" font-size="13" fill="var(--v-ink)" font-weight="700">Staking</text>
+              <text x="124" y="196" text-anchor="middle" font-size="10.5" fill="var(--v-green)">Risiko rendah</text>
+            </g>
+            <!-- step 2: Liquid Staking -->
+            <g class="viz-hot" data-tip="Liquid Staking|Staking sambil menerima token bukti (mis. stETH) yang tetap bisa dipakai. Aset bekerja ganda, tetapi menambah lapisan risiko smart contract & depeg token bukti.">
+              <rect x="222" y="110" width="160" height="102" rx="9" fill="rgba(87,224,230,.12)" stroke="var(--v-cyan)" stroke-width="1.8"/>
+              <text x="302" y="146" text-anchor="middle" font-size="13" fill="var(--v-ink)" font-weight="700">Liquid Staking</text>
+              <text x="302" y="166" text-anchor="middle" font-size="10.5" fill="var(--v-cyan)">Risiko sedang</text>
+            </g>
+            <!-- step 3: Yield Farming -->
+            <g class="viz-hot" data-tip="Yield Farming|Menyediakan likuiditas ke protokol DeFi untuk imbalan (APR/APY). Potensi imbal hasil tertinggi, tetapi rawan impermanent loss & risiko protokol.">
+              <rect x="400" y="64" width="168" height="148" rx="9" fill="rgba(230,198,103,.12)" stroke="var(--v-gold)" stroke-width="1.8"/>
+              <text x="484" y="100" text-anchor="middle" font-size="13" fill="var(--v-ink)" font-weight="700">Yield Farming</text>
+              <text x="484" y="120" text-anchor="middle" font-size="10.5" fill="var(--v-gold)">Risiko tinggi</text>
+            </g>
+          </svg>
+          <div class="viz-legend"><span class="viz-chip"><span class="d d-green"></span>Lebih aman</span><span class="viz-chip"><span class="d d-cyan"></span>Menengah</span><span class="viz-chip"><span class="d d-gold"></span>Lebih agresif</span></div>
+          <p class="viz__note">Makin tinggi potensi imbal hasil, makin tinggi pula risikonya. Arahkan kursor / ketuk tiap tingkat untuk detailnya — <strong>APY besar tidak otomatis berarti untung</strong>.</p>
+        </div>
+
         <div class="callout callout--risk">
           <span class="callout__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
           <div class="callout__body">
@@ -269,6 +302,41 @@
 
         <h3>Oracle (Penghubung Data Dunia Nyata)</h3>
         <p>Smart contract tidak bisa mengakses data luar blockchain secara langsung. <strong>Oracle</strong> menjembatani ini — memasok data dunia nyata (harga aset, hasil pertandingan, cuaca) ke dalam smart contract secara tepercaya. <span class="mono">Chainlink (LINK)</span> adalah penyedia oracle paling dikenal.</p>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Bagaimana oracle memasok data ke smart contract <span class="tag">skema</span></p>
+          <svg viewBox="0 0 600 190" role="img" aria-label="Sumber data dunia nyata dikumpulkan oracle, lalu dikirim ke smart contract di blockchain.">
+            <!-- data sources -->
+            <text x="86" y="22" text-anchor="middle" font-size="10" fill="var(--v-mut)" font-family="var(--font-mono)">DUNIA NYATA</text>
+            <g font-size="11">
+              <rect x="20" y="34" width="132" height="34" rx="8" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="86" y="56" text-anchor="middle" fill="var(--v-ink)">💲 Harga aset</text>
+              <rect x="20" y="78" width="132" height="34" rx="8" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="86" y="100" text-anchor="middle" fill="var(--v-ink)">🏆 Hasil skor</text>
+              <rect x="20" y="122" width="132" height="34" rx="8" fill="var(--v-surf)" stroke="var(--v-border)"/><text x="86" y="144" text-anchor="middle" fill="var(--v-ink)">☁ Cuaca</text>
+            </g>
+            <!-- arrows to oracle -->
+            <g stroke="var(--v-line)" stroke-width="1.6" fill="none">
+              <path d="M154 51 C 200 51 200 86 244 90" marker-end="url(#oar)"/>
+              <path d="M154 95 H242" marker-end="url(#oar)"/>
+              <path d="M154 139 C 200 139 200 104 244 100" marker-end="url(#oar)"/>
+            </g>
+            <defs><marker id="oar" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-line)"/></marker></defs>
+            <!-- oracle node -->
+            <g class="viz-hot" data-tip="Oracle|Mengumpulkan & memverifikasi data dari banyak sumber, lalu menyiarkannya ke blockchain secara tepercaya. Mis. Chainlink (LINK).">
+              <circle cx="300" cy="95" r="40" fill="rgba(230,198,103,.14)" stroke="var(--v-gold)" stroke-width="2.5" class="glow-gold"/>
+              <text x="300" y="92" text-anchor="middle" font-size="13" fill="var(--v-gold)" font-weight="700">Oracle</text>
+              <text x="300" y="110" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">verifikasi</text>
+            </g>
+            <!-- arrow to contract -->
+            <path d="M344 95 H432" stroke="var(--v-cyan)" stroke-width="2" fill="none" marker-end="url(#oar2)" class="glow-cyan"/>
+            <defs><marker id="oar2" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-cyan)"/></marker></defs>
+            <!-- smart contract -->
+            <text x="505" y="22" text-anchor="middle" font-size="10" fill="var(--v-mut)" font-family="var(--font-mono)">BLOCKCHAIN</text>
+            <rect x="436" y="58" width="140" height="74" rx="10" fill="rgba(87,224,230,.10)" stroke="var(--v-cyan)" stroke-width="2"/>
+            <text x="506" y="90" text-anchor="middle" font-size="12" fill="var(--v-cyan)">Smart Contract</text>
+            <text x="506" y="110" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">menjalankan logika</text>
+          </svg>
+          <p class="viz__note">Tanpa oracle, smart contract “buta” terhadap dunia luar. Oracle mengumpulkan &amp; memverifikasi data, lalu mengirimnya masuk — klik node oracle untuk detail.</p>
+        </div>
       </section>
     </article>
 

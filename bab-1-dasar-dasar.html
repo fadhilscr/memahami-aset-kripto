@@ -164,6 +164,42 @@
 
         <h3>Akses (Unbanked)</h3>
         <p>Miliaran orang tidak memiliki akses ke layanan perbankan karena hambatan administratif dan geografis. Dengan aset kripto, siapa pun yang memiliki smartphone dan koneksi internet secara teknis dapat memiliki “rekening” digital untuk menyimpan dan memindahkan nilai, tanpa persetujuan lembaga mana pun.</p>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Pergeseran kepercayaan: institusi → kode <span class="tag">skema</span></p>
+          <div class="vcompare">
+            <div class="vcol vcol--a">
+              <h5><span class="dotc"></span>Sistem lama — percaya institusi</h5>
+              <svg viewBox="0 0 260 120" role="img" aria-label="Pengirim ke penerima harus melalui bank di tengah sebagai pihak yang dipercaya.">
+                <circle cx="34" cy="60" r="18" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="1.6"/><text x="34" y="65" text-anchor="middle" font-size="11" fill="var(--v-ink)">A</text>
+                <circle cx="226" cy="60" r="18" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="1.6"/><text x="226" y="65" text-anchor="middle" font-size="11" fill="var(--v-ink)">B</text>
+                <rect x="98" y="38" width="64" height="44" rx="9" fill="rgba(230,198,103,.14)" stroke="var(--v-gold)" stroke-width="2" class="glow-gold"/>
+                <path d="M112 60h36M130 48v24" stroke="var(--v-gold)" stroke-width="2"/>
+                <text x="130" y="98" text-anchor="middle" font-size="10" fill="var(--v-gold)">Bank</text>
+                <path d="M54 60 H96" stroke="var(--v-line)" stroke-width="1.6" marker-end="url(#t1a)"/>
+                <path d="M164 60 H206" stroke="var(--v-line)" stroke-width="1.6" marker-end="url(#t1a)"/>
+                <defs><marker id="t1a" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-line)"/></marker></defs>
+              </svg>
+              <p style="font-size:.84rem;color:var(--v-mut);margin:.4rem 0 0">Setiap transaksi harus melewati perantara yang <strong style="color:var(--v-gold)">harus Anda percaya</strong> untuk mencatat & menyetujui.</p>
+            </div>
+            <div class="vcol vcol--b">
+              <h5><span class="dotc"></span>Kripto — percaya kode &amp; matematika</h5>
+              <svg viewBox="0 0 260 120" role="img" aria-label="Pengirim langsung ke penerima, diverifikasi jaringan tanpa perantara tunggal.">
+                <circle cx="34" cy="60" r="18" fill="var(--v-surf)" stroke="var(--v-cyan)" stroke-width="1.6"/><text x="34" y="65" text-anchor="middle" font-size="11" fill="var(--v-ink)">A</text>
+                <circle cx="226" cy="60" r="18" fill="var(--v-surf)" stroke="var(--v-cyan)" stroke-width="1.6"/><text x="226" y="65" text-anchor="middle" font-size="11" fill="var(--v-ink)">B</text>
+                <path d="M54 56 H206" stroke="var(--v-cyan)" stroke-width="2" marker-end="url(#t1b)" class="glow-cyan"/>
+                <defs><marker id="t1b" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-cyan)"/></marker></defs>
+                <g stroke="var(--v-line)" stroke-width="1" opacity=".55">
+                  <path d="M70 70 L70 96"/><path d="M120 64 L120 100"/><path d="M170 64 L170 100"/><path d="M190 70 L190 96"/>
+                </g>
+                <g fill="var(--v-line)"><circle cx="70" cy="100" r="3"/><circle cx="120" cy="104" r="3"/><circle cx="170" cy="104" r="3"/><circle cx="190" cy="100" r="3"/></g>
+                <text x="130" y="118" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">ribuan node memverifikasi</text>
+              </svg>
+              <p style="font-size:.84rem;color:var(--v-mut);margin:.4rem 0 0">A mengirim langsung ke B; keabsahan dijamin <strong style="color:var(--v-cyan)">kode terbuka</strong> yang diverifikasi banyak node — tanpa satu pihak penentu.</p>
+            </div>
+          </div>
+          <p class="viz__note">Inti gagasan <em>“code is law”</em>: kepercayaan berpindah dari <strong style="color:var(--v-gold)">satu institusi</strong> ke <strong style="color:var(--v-cyan)">aturan transparan</strong> yang bisa diperiksa siapa pun.</p>
+        </div>
       </section>
 
       <!-- 1.4 -->

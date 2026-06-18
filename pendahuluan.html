@@ -38,6 +38,67 @@
       <section id="alur">
         <p class="lead">Materi disusun secara berlapis, mengikuti alur belajar yang logis — dari pertanyaan paling mendasar hingga sumber belajar dan istilah penting.</p>
         <p>Anda akan dibawa dari pertanyaan paling mendasar — <strong>apa sebenarnya aset kripto itu</strong> — menuju teknologi yang menopangnya, ekosistem yang tumbuh di atasnya, cara menganalisis dan menyusun strategi investasi, aspek keamanan yang wajib dikuasai, kerangka regulasi di Indonesia, hingga kumpulan sumber belajar dan istilah penting. Setiap bab dapat dibaca secara berurutan untuk pemahaman utuh, atau dijadikan rujukan terpisah sesuai kebutuhan.</p>
+
+        <div class="viz reveal">
+          <p class="viz__cap">Peta alur belajar Anda <span class="tag">interaktif</span></p>
+          <svg viewBox="0 0 600 285" role="img" aria-label="Peta enam bab inti dari dasar hingga regulasi, ditambah dua bab rujukan.">
+            <!-- connectors -->
+            <g fill="none" stroke="var(--v-line)" stroke-width="2" opacity=".5">
+              <path d="M104 72 H196"/><path d="M240 72 H332"/><path d="M376 72 H468"/>
+              <path d="M500 92 C500 135 430 130 412 152"/>
+              <path d="M356 168 H264"/><path d="M220 168 H128"/>
+            </g>
+            <!-- start marker -->
+            <text x="80" y="34" text-anchor="middle" font-size="10" fill="var(--v-gold)" font-family="var(--font-mono)">MULAI</text>
+            <path d="M80 38 V52" stroke="var(--v-gold)" stroke-width="2" marker-end="url(#rmar)"/>
+            <defs><marker id="rmar" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="var(--v-gold)"/></marker></defs>
+
+            <!-- Row 1: Bab 1-4 -->
+            <g class="viz-hot" data-tip="Bab 1 · Dasar-Dasar|Apa itu aset kripto, asal-usul Bitcoin, dan mengapa ia bisa bernilai.">
+              <circle cx="80" cy="72" r="24" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="2"/>
+              <text x="80" y="78" text-anchor="middle" font-size="17" fill="var(--v-line)" font-family="var(--font-serif)" font-weight="700">1</text>
+              <text x="80" y="116" text-anchor="middle" font-size="11" fill="var(--v-mut)">Dasar</text>
+            </g>
+            <g class="viz-hot" data-tip="Bab 2 · Teknologi|Blockchain, konsensus PoW/PoS, Layer 1 vs 2, dan dompet.">
+              <circle cx="218" cy="72" r="24" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="2"/>
+              <text x="218" y="78" text-anchor="middle" font-size="17" fill="var(--v-line)" font-family="var(--font-serif)" font-weight="700">2</text>
+              <text x="218" y="116" text-anchor="middle" font-size="11" fill="var(--v-mut)">Teknologi</text>
+            </g>
+            <g class="viz-hot" data-tip="Bab 3 · Ekosistem|Koin vs token, DeFi, staking, stablecoin, NFT, dan tokenomics.">
+              <circle cx="356" cy="72" r="24" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="2"/>
+              <text x="356" y="78" text-anchor="middle" font-size="17" fill="var(--v-line)" font-family="var(--font-serif)" font-weight="700">3</text>
+              <text x="356" y="116" text-anchor="middle" font-size="11" fill="var(--v-mut)">Ekosistem</text>
+            </g>
+            <g class="viz-hot" data-tip="Bab 4 · Investasi|Siklus pasar, halving, analisis, sentimen, dan strategi DCA.">
+              <circle cx="494" cy="72" r="24" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="2"/>
+              <text x="494" y="78" text-anchor="middle" font-size="17" fill="var(--v-line)" font-family="var(--font-serif)" font-weight="700">4</text>
+              <text x="494" y="116" text-anchor="middle" font-size="11" fill="var(--v-mut)">Investasi</text>
+            </g>
+
+            <!-- Row 2: Bab 5-6 -->
+            <g class="viz-hot" data-tip="Bab 5 · Keamanan|Kategori risiko, self-custody, seed phrase, dan jenis penipuan.">
+              <circle cx="390" cy="168" r="24" fill="var(--v-surf)" stroke="var(--v-line)" stroke-width="2"/>
+              <text x="390" y="174" text-anchor="middle" font-size="17" fill="var(--v-line)" font-family="var(--font-serif)" font-weight="700">5</text>
+              <text x="390" y="212" text-anchor="middle" font-size="11" fill="var(--v-mut)">Keamanan</text>
+            </g>
+            <g class="viz-hot" data-tip="Bab 6 · Regulasi|Status hukum di Indonesia, OJK, pajak PMK 50/2025, dan CBDC.">
+              <circle cx="244" cy="168" r="24" fill="rgba(230,198,103,.14)" stroke="var(--v-gold)" stroke-width="2.5" class="glow-gold"/>
+              <text x="244" y="174" text-anchor="middle" font-size="17" fill="var(--v-gold)" font-family="var(--font-serif)" font-weight="700">6</text>
+              <text x="244" y="212" text-anchor="middle" font-size="11" fill="var(--v-mut)">Regulasi</text>
+            </g>
+
+            <!-- reference chapters -->
+            <path d="M220 168 H128" stroke="none"/>
+            <g class="viz-hot" data-tip="Bab 7 &amp; 8 · Rujukan|Direktori tools tepercaya dan glosarium istilah — dipakai kapan pun dibutuhkan.">
+              <rect x="20" y="150" width="92" height="38" rx="10" fill="var(--v-surf)" stroke="var(--v-cyan)" stroke-dasharray="5 4"/>
+              <text x="66" y="167" text-anchor="middle" font-size="10.5" fill="var(--v-cyan)" font-family="var(--font-mono)">RUJUKAN</text>
+              <text x="66" y="181" text-anchor="middle" font-size="9.5" fill="var(--v-mut)">Tools · Glosarium</text>
+            </g>
+
+            <text x="300" y="262" text-anchor="middle" font-size="11" fill="var(--v-mut)" font-style="italic">Dari fondasi → teknologi → praktik → perlindungan → aturan</text>
+          </svg>
+          <p class="viz__note">Enam bab inti membentuk satu alur belajar berurutan; <strong style="color:var(--v-cyan)">Tools</strong> dan <strong style="color:var(--v-cyan)">Glosarium</strong> adalah rujukan yang bisa dibuka kapan saja. Arahkan kursor / ketuk tiap titik untuk melihat isinya.</p>
+        </div>
       </section>
 
       <section id="prinsip">

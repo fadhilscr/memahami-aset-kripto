@@ -13,6 +13,9 @@
   --v-gold: #E6C667;        /* warm gold */
   --v-ink: #d6e2f7;
   --v-mut: #8ea4ca;
+  --v-red: #ff7a8a;
+  --v-green: #5be0a0;
+  --v-surf: rgba(20,32,54,.7);
   --v-grid: rgba(108,156,255,.10);
   --v-border: #26395f;
   position: relative;
@@ -237,6 +240,9 @@
   --v-gold: #8a6912;
   --v-ink: #15233D;
   --v-mut: #445870;
+  --v-red: #d8324a;
+  --v-green: #0f8a52;
+  --v-surf: rgba(255,255,255,.7);
   --v-grid: rgba(37,99,235,.07);
   --v-border: #bccde3;
   box-shadow: inset 0 0 60px rgba(37,99,235,.04), 0 6px 24px -10px rgba(15,28,51,.14);
