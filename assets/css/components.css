@@ -604,6 +604,40 @@ table.data .col-h { font-weight: 700; color: var(--ink-strong); }
 .quote-hero .by { display: block; margin-top: 1.3rem; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
 .quote-hero .tr { display: block; margin-top: .7rem; font-size: .95rem; color: #aebbd2; max-width: 44ch; margin-inline: auto; font-style: italic; }
 
+/* external CTA card (mis. link ke understandbitcoin) */
+.ext-cta {
+  display: flex; align-items: center; gap: clamp(1rem,2.5vw,1.5rem); flex-wrap: wrap;
+  max-width: 880px; margin: 0 auto; padding: clamp(1.3rem,3vw,1.8rem) clamp(1.3rem,3vw,2rem);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
+  background:
+    radial-gradient(130% 150% at 0% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 60%),
+    var(--surface);
+  box-shadow: var(--shadow-md);
+  transition: border-color .16s, transform .14s, box-shadow .16s;
+  text-decoration: none;
+}
+.ext-cta:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-lg); text-decoration: none; }
+.ext-cta__ic {
+  flex: none; width: 54px; height: 54px; border-radius: 14px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--gold), #d7b13a); color: #2a2105;
+  box-shadow: 0 8px 22px -10px rgba(201,162,39,.7);
+}
+.ext-cta__ic svg { width: 28px; height: 28px; }
+.ext-cta__body { flex: 1; min-width: 220px; }
+.ext-cta__t { display: block; font-family: var(--font-serif); font-size: 1.18rem; color: var(--ink-strong); font-weight: 700; margin-bottom: .2rem; }
+.ext-cta__d { display: block; color: var(--muted); font-size: .92rem; line-height: 1.5; }
+.ext-cta__d b { color: var(--ink-strong); font-weight: 700; }
+.ext-cta__go {
+  flex: none; display: inline-flex; align-items: center; gap: .45rem;
+  font-family: var(--font-mono); font-size: .82rem; font-weight: 600; letter-spacing: .02em;
+  color: var(--accent); white-space: nowrap;
+}
+.ext-cta__go svg { width: 16px; height: 16px; }
+@media (max-width: 560px){ .ext-cta { flex-direction: column; align-items: flex-start; } }
+
+/* single-button pager (mis. kembali ke beranda) */
+.pager--single { grid-template-columns: minmax(0,460px); justify-content: center; }
+
 /* reveal on scroll */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
