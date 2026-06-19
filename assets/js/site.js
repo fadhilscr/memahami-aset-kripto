@@ -17,7 +17,8 @@
     { href: "bab-5-risiko-keamanan.html",label: "5 · Keamanan",  short: "Bab 5 — Risiko & Keamanan" },
     { href: "bab-6-regulasi.html",       label: "6 · Regulasi",  short: "Bab 6 — Regulasi & Pajak" },
     { href: "tools.html",                label: "Tools",       short: "Bab 7 — Tools & Sumber Belajar" },
-    { href: "glosarium.html",            label: "Glosarium",   short: "Bab 8 — Glosarium" }
+    { href: "glosarium.html",            label: "Glosarium",   short: "Bab 8 — Glosarium" },
+    { href: "tentang.html",              label: "Tentang",     short: "Tentang Penulis" }
   ];
   // links shown in the top nav (skip Beranda; it's the brand)
   var NAV = PAGES.slice(1);
