@@ -14,6 +14,12 @@
   --gold: #C9A227;
   --gold-ink: #8a6d12;
 
+  /* Sorotan teks isi (halus, theme-aware) — LIGHT */
+  --hl-key:  #8a6712;  /* penting (emas) */
+  --hl-term: #0E7C7B;  /* istilah teknis (teal) */
+  --hl-risk: #C13A2B;  /* risiko (merah) */
+  --hl-pos:  #0f8a52;  /* positif (hijau) */
+
   /* Accent — default "Biru". Dapat di-override oleh [data-accent] */
   --accent: #2563EB;
   --accent-strong: #1d4ed8;
@@ -81,6 +87,12 @@
   --navy-900: #0a1020;    /* was #08111f */
   --gold: #E0C25C;
   --gold-ink: #E0C25C;
+
+  /* Sorotan teks isi (halus, theme-aware) — DARK */
+  --hl-key:  #E3C879;  /* penting (emas lembut) */
+  --hl-term: #7ED4D9;  /* istilah teknis (cyan lembut) */
+  --hl-risk: #FF9DA8;  /* risiko (coral lembut) */
+  --hl-pos:  #7FE0AE;  /* positif (hijau lembut) */
 
   --accent: #6C9CFF;
   --accent-strong: #8db1ff;

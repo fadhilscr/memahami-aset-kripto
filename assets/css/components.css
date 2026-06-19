@@ -185,6 +185,25 @@
 .prose ul, .prose ol { margin: 0 0 1.2em; padding-left: 1.3em; }
 .prose li { margin-bottom: .5em; padding-left: .2em; }
 .prose li::marker { color: var(--accent); font-weight: 700; }
+
+/* === Sorotan kata di teks isi (halus, semantik, theme-aware) ===
+   Hanya paragraf & list utama yang diwarnai agar tidak ramai. Komponen
+   yang sudah punya warna/latar sendiri (callout, kartu, diagram) dibiarkan. */
+.prose p strong,
+.prose > section > ul > li strong,
+.prose > section > ol > li strong { color: var(--hl-key); }
+.prose p .mono, .prose li .mono { color: var(--hl-term); }
+
+/* netralkan kembali di dalam komponen berwarna */
+.prose .callout strong, .prose .card strong, .prose .tile strong,
+.prose table strong, .prose .keypair strong { color: var(--ink-strong); }
+.prose .viz strong, .prose .diagram strong { color: var(--v-ink); }
+.prose .adage strong { color: #fff; }
+.prose .callout .mono, .prose .viz .mono, .prose .diagram .mono,
+.prose table .mono, .prose .card .mono, .prose .tile .mono { color: inherit; }
+
+/* risiko: kata tebal di dalam callout risiko → merah lembut */
+.prose .callout--risk .callout__body strong { color: var(--hl-risk); }
 .lead {
   font-size: 1.18rem !important; line-height: 1.62; color: var(--muted) !important;
   border-left: 3px solid var(--gold); padding-left: 1.1rem; margin-bottom: 1.8rem;
