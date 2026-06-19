@@ -148,6 +148,7 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "ss01";
   transition: background-color .35s ease, color .35s ease;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -170,6 +171,9 @@ em { color: inherit; }
 ::selection { background: var(--accent); color: #fff; }
 
 img { max-width: 100%; display: block; }
+/* pengaman anti-overflow horizontal yang aman untuk position:sticky */
+svg, video, iframe, canvas, table { max-width: 100%; }
+.prose, .prose p, .prose li, .prose h1, .prose h2, .prose h3, .prose h4 { overflow-wrap: break-word; }
 
 hr { border: 0; border-top: 1px solid var(--border); margin: 2.6rem 0; }
 

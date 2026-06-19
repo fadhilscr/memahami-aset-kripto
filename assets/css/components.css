@@ -3,6 +3,8 @@
    ========================================================================= */
 
 /* ----------------------------- TOP NAV ----------------------------------- */
+/* mount point tidak boleh membatasi sticky topnav (jika tidak, nav ikut scroll) */
+#site-nav { display: contents; }
 .topnav {
   position: sticky; top: 0; z-index: 100;
   height: var(--nav-h);
@@ -14,7 +16,7 @@
 .topnav__inner {
   max-width: var(--maxw); margin-inline: auto; height: 100%;
   padding-inline: clamp(20px, 5vw, 48px);
-  display: flex; align-items: center; gap: 1.4rem;
+  display: flex; align-items: center; gap: .9rem;
 }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--font-serif); font-weight: 600; color: var(--ink-strong); font-size: 1.04rem; letter-spacing: -.01em; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
@@ -31,10 +33,10 @@
 }
 .brand small { display: block; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; font-weight: 500; }
 
-.nav-links { display: flex; align-items: center; gap: .15rem; margin-left: auto; }
+.nav-links { display: flex; align-items: center; gap: .06rem; margin-left: auto; }
 .nav-links a {
-  color: var(--muted); font-weight: 600; font-size: .9rem;
-  padding: .5rem .68rem; border-radius: 8px; white-space: nowrap;
+  color: var(--muted); font-weight: 600; font-size: .78rem;
+  padding: .4rem .44rem; border-radius: 8px; white-space: nowrap;
   transition: color .15s, background-color .15s;
 }
 .nav-links a:hover { color: var(--ink-strong); background: var(--surface-2); text-decoration: none; }
@@ -71,7 +73,7 @@
 .nav-burger { display: none; }
 .mobile-panel { display: none; }
 
-@media (max-width: 940px) {
+@media (max-width: 1260px) {
   .nav-links { display: none; }
   .nav-burger { display: grid; }
   .mobile-panel {
@@ -86,6 +88,17 @@
     border-bottom: 1px solid var(--border); font-size: 1.05rem;
   }
   .mobile-panel a.is-active { color: var(--accent); }
+}
+
+/* nav rapat di layar kecil agar brand + tools tidak melebihi lebar */
+@media (max-width: 480px) {
+  .brand small { display: none; }
+  .brand { font-size: .92rem; }
+  .topnav__inner { padding-inline: 16px; gap: .5rem; }
+  .nav-tools { gap: .3rem; margin-left: .25rem; }
+}
+@media (max-width: 360px) {
+  .accent-menu { display: none; }
 }
 
 /* ----------------------------- HERO -------------------------------------- */
